@@ -2,8 +2,12 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import uuid
 
+import asyncio
+from calendar_watcher.background_task import calendar_monitor
+
+
 from logger_config import logger
-from recorder.recorder import record_audio
+from recorder.recorder import start_streaming_recording, stop_streaming_recording
 from transcription.transcribe import transcribe_audio
 from summarizer.summarize import summarize_text
 
@@ -13,6 +17,11 @@ app = FastAPI(
     version="0.1.0",
     description="Local API for meeting recording, transcription and summarization"
 )
+
+@app.on_event("startup")
+async def startup_event():
+    asyncio.create_task(calendar_monitor())
+    logger.info("Background calendar monitor task started at API startup.")
 
 # --- request/response schemas ---
 class MeetingResponse(BaseModel):
@@ -38,21 +47,25 @@ async def start_record():
     meeting_id = str(uuid.uuid4())
     filename = f"{meeting_id}.wav"
 
-    logger.info(f"Initiating new recording with ID: {meeting_id}")
+    logger.info(f"Initiating new streaming recording with ID: {meeting_id}")
     try:
-        record_audio(duration=10, filename=filename)
-        logger.info(f"Recording completed for ID: {meeting_id}")
+        start_streaming_recording(filename=filename)
     except Exception as e:
-        logger.error(f"Recording failed for ID {meeting_id}: {e}", exc_info=True)
-        raise HTTPException(status_code=500, detail="Error occurred during recording.")
+        logger.error(f"Failed to start recording for ID {meeting_id}: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Error during start recording.")
 
     return {"meeting_id": meeting_id}
 
 # --- stop recording (placeholder) ---
 @app.post("/stop_record", response_model=MeetingResponse)
 async def stop_record(meeting: MeetingResponse):
-    logger.info(f"Stop recording requested for ID: {meeting.meeting_id}")
-    # TODO: implement stopping a long-running recording session
+    logger.info(f"Stop recording request received for ID: {meeting.meeting_id}")
+    try:
+        stop_streaming_recording()
+    except Exception as e:
+        logger.error(f"Failed to stop recording for ID {meeting.meeting_id}: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Error during stop recording.")
+
     return {"meeting_id": meeting.meeting_id}
 
 # --- transcription endpoint ---
