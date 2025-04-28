@@ -176,3 +176,4 @@ cython_debug/
 # Audio files
 storage/
 *.json
+*.pickle
