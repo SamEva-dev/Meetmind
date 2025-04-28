@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+pydantic
+faster-whisper
+python-dotenv
+sounddevice
+numpy
