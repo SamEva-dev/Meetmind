@@ -19,7 +19,7 @@ async def calendar_monitor():
     
     while True:
         try:
-            now = datetime.datetime.now(datetime.timezone.utc)
+            now = datetime.datetime.now(pytz.utc)
 
             events = get_next_events(max_results=5)
 
