@@ -1,3 +1,5 @@
+# RUn this first : Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
 Write-Host " Réinitialisation de l'environnement virtuel MeetMind..." -ForegroundColor Cyan
 
 # Supprimer venv existant
@@ -9,7 +11,7 @@ if (Test-Path "venv") {
 }
 
 # Créer un nouveau venv
-Write-Host "🛠️ Création d'un nouvel environnement virtuel..." -ForegroundColor Cyan
+Write-Host " Création d'un nouvel environnement virtuel..." -ForegroundColor Cyan
 python -m venv venv
 
 # Activer le venv

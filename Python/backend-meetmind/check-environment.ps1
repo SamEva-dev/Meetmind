@@ -1,3 +1,4 @@
+# RUn this first : Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 Write-Host " Vérification de l'environnement pour MeetMind..." -ForegroundColor Cyan
 
 # Fonction pour vérifier si une commande existe

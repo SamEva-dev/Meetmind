@@ -1,3 +1,5 @@
+# RUn this first : Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
 Write-Host "Préparation de l'environnement MeetMind..." -ForegroundColor Cyan
 
 # Créer un venv s'il n'existe pas déjà

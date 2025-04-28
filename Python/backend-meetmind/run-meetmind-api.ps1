@@ -1,4 +1,6 @@
-Write-Host "🚀 Lancement du serveur MeetMind (FastAPI)..." -ForegroundColor Cyan
+# RUn this first : Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+Write-Host " Lancement du serveur MeetMind (FastAPI)..." -ForegroundColor Cyan
 
 # Activer venv
 & .\venv\Scripts\Activate.ps1

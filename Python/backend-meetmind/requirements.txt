@@ -5,3 +5,5 @@ faster-whisper
 python-dotenv
 sounddevice
 numpy
+transformers
+torch
