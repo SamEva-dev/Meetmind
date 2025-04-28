@@ -40,7 +40,7 @@ async def start_record():
 
     logger.info(f"Initiating new recording with ID: {meeting_id}")
     try:
-        record_audio(duration=5, filename=filename)
+        record_audio(duration=10, filename=filename)
         logger.info(f"Recording completed for ID: {meeting_id}")
     except Exception as e:
         logger.error(f"Recording failed for ID {meeting_id}: {e}", exc_info=True)

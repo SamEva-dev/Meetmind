@@ -7,7 +7,7 @@ import sounddevice as sd
 import numpy as np
 import wave
 
-def record_audio(duration=5, filename="output.wav", samplerate=16000):
+def record_audio(duration=10, filename="output.wav", samplerate=16000):
     """
     Records microphone audio for the given duration (in seconds),
     and writes it to a WAV file in the storage folder.
