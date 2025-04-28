@@ -5,6 +5,8 @@ import uuid
 from logger_config import logger
 from recorder.recorder import record_audio
 from transcription.transcribe import transcribe_audio
+from summarizer.summarize import summarize_text
+
 
 app = FastAPI(
     title="MeetMind Backend",
@@ -19,6 +21,10 @@ class MeetingResponse(BaseModel):
 class TranscriptResponse(BaseModel):
     meeting_id: str
     transcript: str
+
+class SummaryResponse(BaseModel):
+    meeting_id: str
+    summary: str
 
 # --- health check ---
 @app.get("/health")
@@ -63,7 +69,21 @@ async def transcribe_endpoint(meeting: MeetingResponse):
     except Exception as e:
         logger.error(f"Internal error on /transcribe for ID {meeting.meeting_id}: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail="Internal error during transcription.")
-
+    
+@app.post("/summarize", response_model=SummaryResponse)
+async def summarize_endpoint(meeting: MeetingResponse):
+    logger.info(f"Summarization request received for ID: {meeting.meeting_id}")
+    try:
+        summary = summarize_text(meeting.meeting_id)
+        logger.info(f"Summarization successful for ID: {meeting.meeting_id}")
+        return {"meeting_id": meeting.meeting_id, "summary": summary}
+    except FileNotFoundError as fnf:
+        logger.warning(str(fnf))
+        raise HTTPException(status_code=404, detail=str(fnf))
+    except Exception as e:
+        logger.error(f"Internal error on /summarize for ID {meeting.meeting_id}: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Internal error during summarization.")
+    
 # --- get full results ---
 @app.get("/results/{meeting_id}")
 async def get_results(meeting_id: str):
