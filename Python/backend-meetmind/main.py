@@ -34,17 +34,17 @@ async def startup_event():
 
 # --- request/response schemas ---
 class MeetingResponse(BaseModel):
-    meeting_id: str
+    meetingId: str
 
 class TranscriptResponse(BaseModel):
-    meeting_id: str
+    meetingId: str
     transcript: str
 
 class SummaryResponse(BaseModel):
-    meeting_id: str
+    meetingId: str
   
 class MeetingInfo(BaseModel):
-    meeting_id: str
+    meetingId: str
     status: str
 
 class MeetingDetail(MeetingInfo):
@@ -62,70 +62,70 @@ async def health_check():
 # --- start recording ---
 @app.post("/start_record", response_model=MeetingResponse)
 async def start_record():
-    meeting_id = str(uuid.uuid4())
-    filename = f"{meeting_id}.wav"
+    meetingId = str(uuid.uuid4())
+    filename = f"{meetingId}.wav"
 
-    logger.info(f"Initiating new streaming recording with ID: {meeting_id}")
+    logger.info(f"Initiating new streaming recording with ID: {meetingId}")
 
     try:
         start_streaming_recording(filename=filename)
         # Create meeting entry
-        meeting_manager.create(meeting_id)
+        meeting_manager.create(meetingId)
     except Exception as e:
-        logger.error(f"Failed to start recording for ID {meeting_id}: {e}", exc_info=True)
+        logger.error(f"Failed to start recording for ID {meetingId}: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail="Error during start recording.")
 
-    return {"meeting_id": meeting_id}
+    return {"meetingId": meetingId}
 
 # --- stop recording ---
 @app.post("/stop_record", response_model=MeetingResponse)
 async def stop_record(meeting: MeetingResponse):
-    logger.info(f"Stop recording request received for ID: {meeting.meeting_id}")
+    logger.info(f"Stop recording request received for ID: {meeting.meetingId}")
 
     try:
         stop_streaming_recording()
         # Update meeting status to Completed
-        meeting_manager.update_status(meeting.meeting_id, "Completed")
+        meeting_manager.update_status(meeting.meetingId, "Completed")
     except Exception as e:
-        logger.error(f"Failed to stop recording for ID {meeting.meeting_id}: {e}", exc_info=True)
+        logger.error(f"Failed to stop recording for ID {meeting.meetingId}: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail="Error during stop recording.")
 
-    return {"meeting_id": meeting.meeting_id}
+    return {"meetingId": meeting.meetingId}
 
 # --- transcription endpoint ---
 @app.post("/transcribe", response_model=TranscriptResponse)
 async def transcribe_endpoint(meeting: MeetingResponse):
-    logger.info(f"Transcription request received for ID: {meeting.meeting_id}")
+    logger.info(f"Transcription request received for ID: {meeting.meetingId}")
     try:
-        transcript = transcribe_audio(meeting.meeting_id)
+        transcript = transcribe_audio(meeting.meetingId)
         # Update meeting status and transcript path
-        transcript_path = f"storage/{meeting.meeting_id}.txt"
-        meeting_manager.update_status(meeting.meeting_id, "Transcribed", transcript_path=transcript_path)
-        logger.info(f"Transcription successful for ID: {meeting.meeting_id}")
-        return {"meeting_id": meeting.meeting_id, "transcript": transcript}
+        transcript_path = f"storage/{meeting.meetingId}.txt"
+        meeting_manager.update_status(meeting.meetingId, "Transcribed", transcript_path=transcript_path)
+        logger.info(f"Transcription successful for ID: {meeting.meetingId}")
+        return {"meetingId": meeting.meetingId, "transcript": transcript}
     except FileNotFoundError as fnf:
         logger.warning(str(fnf))
         raise HTTPException(status_code=404, detail=str(fnf))
     except Exception as e:
-        logger.error(f"Internal error on /transcribe for ID {meeting.meeting_id}: {e}", exc_info=True)
+        logger.error(f"Internal error on /transcribe for ID {meeting.meetingId}: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail="Internal error during transcription.")
 
 # --- summarization endpoint ---
 @app.post("/summarize", response_model=SummaryResponse)
 async def summarize_endpoint(meeting: MeetingResponse):
-    logger.info(f"Summarization request received for ID: {meeting.meeting_id}")
+    logger.info(f"Summarization request received for ID: {meeting.meetingId}")
     try:
-        summary = summarize_text(meeting.meeting_id)
+        summary = summarize_text(meeting.meetingId)
         # Update meeting status and summary path
-        summary_path = f"storage/{meeting.meeting_id}_summary.txt"
-        meeting_manager.update_status(meeting.meeting_id, "Summarized", summary_path=summary_path)
-        logger.info(f"Summarization successful for ID: {meeting.meeting_id}")
-        return {"meeting_id": meeting.meeting_id, "summary": summary}
+        summary_path = f"storage/{meeting.meetingId}_summary.txt"
+        meeting_manager.update_status(meeting.meetingId, "Summarized", summary_path=summary_path)
+        logger.info(f"Summarization successful for ID: {meeting.meetingId}")
+        return {"meetingId": meeting.meetingId, "summary": summary}
     except FileNotFoundError as fnf:
         logger.warning(str(fnf))
         raise HTTPException(status_code=404, detail=str(fnf))
     except Exception as e:
-        logger.error(f"Internal error on /summarize for ID {meeting.meeting_id}: {e}", exc_info=True)
+        logger.error(f"Internal error on /summarize for ID {meeting.meetingId}: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail="Internal error during summarization.")
 
 # --- meetings endpoints ---
@@ -134,18 +134,18 @@ async def list_meetings():
     logger.info("Listing all meetings")
     return meeting_manager.list_all()
 
-@app.get("/meetings/{meeting_id}", response_model=MeetingDetail)
-async def get_meeting(meeting_id: str):
-    logger.info(f"Retrieving details for meeting ID: {meeting_id}")
-    meeting = meeting_manager.get(meeting_id)
+@app.get("/meetings/{meetingId}", response_model=MeetingDetail)
+async def get_meeting(meetingId: str):
+    logger.info(f"Retrieving details for meeting ID: {meetingId}")
+    meeting = meeting_manager.get(meetingId)
     if not meeting:
         raise HTTPException(status_code=404, detail="Meeting not found.")
     return meeting
 
-@app.delete("/meetings/{meeting_id}")
-async def delete_meeting(meeting_id: str):
-    logger.info(f"Delete request for meeting ID: {meeting_id}")
-    success = meeting_manager.delete(meeting_id)
+@app.delete("/meetings/{meetingId}")
+async def delete_meeting(meetingId: str):
+    logger.info(f"Delete request for meeting ID: {meetingId}")
+    success = meeting_manager.delete(meetingId)
     if not success:
         raise HTTPException(status_code=404, detail="Meeting not found.")
     return {"detail": "Meeting deleted."}

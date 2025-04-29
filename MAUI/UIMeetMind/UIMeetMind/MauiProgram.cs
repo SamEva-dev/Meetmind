@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
 using UIMeetMind.Services;
+using UIMeetMind.Utils;
 using UIMeetMind.ViewModels;
 
 namespace UIMeetMind
@@ -9,6 +10,8 @@ namespace UIMeetMind
     {
         public static MauiApp CreateMauiApp()
         {
+            LoggerConfig.Init();
+
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()

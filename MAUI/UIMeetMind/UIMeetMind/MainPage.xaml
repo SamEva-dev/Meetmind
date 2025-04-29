@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"  
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
-            x:Class="UIMeetMind.MainPage"  
+            x:Class="UIMeetMind.MainPage"
+              x:Name="RootPage"
             xmlns:vm="clr-namespace:UIMeetMind.ViewModels"  
             BackgroundColor="#FCFCFD">  
 
@@ -21,97 +22,175 @@
            </Grid>  
 
            <!-- Status Card -->  
-           <Border BackgroundColor="#EDE9FE" StrokeShape="RoundRectangle 16" Padding="24">  
-               <VerticalStackLayout Spacing="12" HorizontalOptions="Center">  
-                   <Label Text="Prêt à enregistrer" FontSize="18" FontAttributes="Bold" TextColor="#344054" HorizontalOptions="Center" />  
-                   <Button Text="▶ Démarrer l'enregistrement"  
-                           Command="{Binding StartRecordingCommand}"  
-                           BackgroundColor="#7F56D9" TextColor="White" Padding="16,8"  
-                           CornerRadius="8" FontAttributes="Bold" WidthRequest="220" />  
-               </VerticalStackLayout>  
-           </Border>  
+           <Border BackgroundColor="#EDE9FE" StrokeShape="RoundRectangle 16" Padding="24">
+                <VerticalStackLayout Spacing="12" HorizontalOptions="Center">
+                    <Label Text="Prêt à enregistrer" FontSize="18" FontAttributes="Bold" TextColor="#344054" HorizontalOptions="Center" />
+                    <HorizontalStackLayout Spacing="16">
+                        <Button Text="▶ Démarrer l'enregistrement"
+                                Command="{Binding StartRecordingCommand}"
+                                BackgroundColor="#7F56D9" TextColor="White" Padding="16,8"
+                                CornerRadius="8" FontAttributes="Bold" />
+                        <Button Text="■ Arrêter"
+                                Command="{Binding StopRecordingCommand}"
+                                BackgroundColor="#F04438" TextColor="White" Padding="16,8"
+                                CornerRadius="8" FontAttributes="Bold"
+                                IsVisible="{Binding HasRecordingInProgress}" />
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Border>  
 
            <!-- Réunions Section -->  
-           <Border StrokeShape="RoundRectangle 12" Padding="16" Stroke="#E4E7EC">  
-               <VerticalStackLayout Spacing="16">  
-                   <Grid HorizontalOptions="Fill" VerticalOptions="Start">  
-                       <Grid.ColumnDefinitions>  
-                           <ColumnDefinition Width="1*" />  
-                           <ColumnDefinition Width="1*" />  
-                       </Grid.ColumnDefinitions>  
-                       <Label Text="Réunions" HorizontalOptions="Start" VerticalOptions="Start"  
-                              FontSize="16" FontAttributes="Bold" TextColor="#101828" />  
-                       <Button Grid.Column="1" Text="Actualiser" HorizontalOptions="End" VerticalOptions="Start"  
-                               Command="{Binding RefreshMeetingsCommand}" FontSize="13"  
-                               BackgroundColor="#F2F4F7" TextColor="#344054" CornerRadius="8" />  
-                   </Grid>  
+           <Border StrokeShape="RoundRectangle 12" Padding="16" Stroke="#E4E7EC">
+                <VerticalStackLayout Spacing="16">
+                    <Grid HorizontalOptions="Fill" VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Réunions" HorizontalOptions="Start" VerticalOptions="Start"  
+                            FontSize="16" FontAttributes="Bold" TextColor="#101828" />
+                        <Button Grid.Column="1" Text="Actualiser" HorizontalOptions="End" VerticalOptions="Start"  
+                                Command="{Binding LoadMeetingsCommand}" FontSize="13"  
+                                BackgroundColor="#F2F4F7" TextColor="#344054" CornerRadius="8" />
+                    </Grid>
 
-                   <Grid ColumnDefinitions="*,*,*,Auto" RowSpacing="8">  
-                       <Grid.RowDefinitions>  
-                           <RowDefinition Height="Auto" />  
-                           <RowDefinition Height="Auto" />  
-                           <RowDefinition Height="Auto" />  
-                       </Grid.RowDefinitions>  
-                       <Label Text="ID" FontAttributes="Bold" Grid.Column="0" />  
-                       <Label Text="DATE" FontAttributes="Bold" Grid.Column="1" />  
-                       <Label Text="STATUT" FontAttributes="Bold" Grid.Column="2" />  
-                       <Label Text="ACTIONS" FontAttributes="Bold" Grid.Column="3" />  
-
-                       <!-- Sample items repeated in real app via CollectionView -->  
-                       <Label Text="MEET-001" Grid.Row="1" Grid.Column="0" />  
-                       <Label Text="2025-04-27" Grid.Row="1" Grid.Column="1" />  
-                       <Label Text="Résumé" TextColor="Purple" Grid.Row="1" Grid.Column="2" />  
-                       <HorizontalStackLayout Grid.Row="1" Grid.Column="3" Spacing="8">  
-                           <ImageButton Source="doc_icon.png" WidthRequest="20" HeightRequest="20" />  
-                           <ImageButton Source="trash_icon.png" WidthRequest="20" HeightRequest="20" />  
-                       </HorizontalStackLayout>  
-                   </Grid>  
-               </VerticalStackLayout>  
-           </Border>  
+                    <CollectionView ItemsSource="{Binding Meetings}">
+                        <CollectionView.EmptyView>
+                            <VerticalStackLayout Padding="24" HorizontalOptions="Center">
+                                <Label Text="Aucune réunion" FontSize="16" FontAttributes="Bold" HorizontalOptions="Center" />
+                                <Label Text="Démarrez un enregistrement pour commencer à capturer vos réunions." FontSize="14" TextColor="#667085" HorizontalOptions="Center" />
+                            </VerticalStackLayout>
+                        </CollectionView.EmptyView>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Border StrokeShape="RoundRectangle 12" Stroke="#EAECF0" BackgroundColor="White" Padding="12" Margin="0,4">
+                                    <VerticalStackLayout>
+                                        <Label Text="ID: {Binding MeetingId}" FontSize="14" FontAttributes="Bold" />
+                                        <Label Text="Statut: {Binding Status}" FontSize="12" TextColor="#667085" />
+                                    </VerticalStackLayout>
+                                </Border>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </VerticalStackLayout>
+            </Border>  
 
            <!-- Files Section -->  
            <HorizontalStackLayout Spacing="16">  
                <!-- Fichiers Audio -->  
-               <Border StrokeShape="RoundRectangle 12" Padding="16" WidthRequest="300">  
-                   <VerticalStackLayout>  
-                       <Label Text="Fichiers Audio" FontAttributes="Bold" FontSize="14" />  
-                       <CollectionView ItemsSource="{Binding AudioFiles}" SelectionMode="Single" SelectionChangedCommand="{Binding SelectFileCommand}" SelectionChangedCommandParameter="{Binding SelectedItem, Mode=OneWay}">  
-                           
-                       </CollectionView>  
-                   </VerticalStackLayout>  
-               </Border>  
+               <Border StrokeShape="RoundRectangle 12" Padding="16" WidthRequest="300">
+                    <VerticalStackLayout>
+                        <Label Text="Fichiers Audio" FontAttributes="Bold" FontSize="14" />
+
+                        <CollectionView ItemsSource="{Binding AudioFiles}"
+                                    SelectionMode="Single"
+                                    SelectionChangedCommand="{Binding SelectFileCommand}"
+                                    SelectionChangedCommandParameter="{Binding SelectedItem, Mode=OneWay}">
+                            <CollectionView.EmptyView>
+                                <VerticalStackLayout Padding="16" HorizontalOptions="Center" Spacing="8">
+                                    <Image Source="empty_audio.png" WidthRequest="48" HeightRequest="48" />
+                                    <Label Text="Aucun fichier audio" FontSize="14" FontAttributes="Bold" />
+                                    <Label Text="Démarrez un enregistrement pour générer des fichiers audio." FontSize="13" TextColor="#667085" />
+                                </VerticalStackLayout>
+                            </CollectionView.EmptyView>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Border StrokeShape="RoundRectangle 12" Padding="8" Margin="0,4">
+                                        <VerticalStackLayout Spacing="6">
+                                            <Label Text="{Binding FileName}" FontAttributes="Bold" FontSize="13" />
+                                            <HorizontalStackLayout Spacing="12">
+                                                <ImageButton Source="download_icon.png"
+                                     Command="{Binding Source={x:Reference RootPage}, Path=BindingContext.DownloadFileCommand}"
+                                     CommandParameter="{Binding .}" WidthRequest="20" />
+                                                <ImageButton Source="trash_icon.png"
+                                     Command="{Binding Source={x:Reference RootPage}, Path=BindingContext.DeleteFileCommand}"
+                                     CommandParameter="{Binding .}" WidthRequest="20" />
+                                                <ImageButton Source="transcribe_icon.png"
+                                     Command="{Binding Source={x:Reference RootPage}, Path=BindingContext.TranscribeCommand}"
+                                     CommandParameter="{Binding .}" WidthRequest="20" />
+                                                <ImageButton Source="summary_icon.png"
+                                     Command="{Binding Source={x:Reference RootPage}, Path=BindingContext.SummarizeCommand}"
+                                     CommandParameter="{Binding .}" WidthRequest="20" />
+                                            </HorizontalStackLayout>
+                                        </VerticalStackLayout>
+                                    </Border>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </VerticalStackLayout>
+                </Border>  
 
                <!-- Transcriptions -->  
-               <Border StrokeShape="RoundRectangle 12" Padding="16" WidthRequest="300">  
-                   <VerticalStackLayout>  
-                       <Label Text="Transcriptions" FontAttributes="Bold" FontSize="14" />  
-                       <StackLayout>  
-                           <HorizontalStackLayout Spacing="8" VerticalOptions="Center">  
-                               <Image Source="txt_icon.png" WidthRequest="20" HeightRequest="20" />  
-                               <Label Text="Meeting-001_transcript.txt" />  
-                               <Label Text="27/04/2025" TextColor="#98A2B3" />  
-                               <ImageButton Source="download_icon.png" WidthRequest="20" />  
-                               <ImageButton Source="trash_icon.png" WidthRequest="20" />  
-                           </HorizontalStackLayout>  
-                       </StackLayout>  
-                   </VerticalStackLayout>  
-               </Border>  
+               <Border StrokeShape="RoundRectangle 12" Padding="16" WidthRequest="300">
+                    <VerticalStackLayout>
+                        <Label Text="Transcriptions" FontAttributes="Bold" FontSize="14" />
+                        <CollectionView ItemsSource="{Binding TranscriptFiles}"
+                SelectionMode="Single"
+                SelectionChangedCommand="{Binding SelectFileCommand}"
+                SelectionChangedCommandParameter="{Binding SelectedItem, Mode=OneWay}">
+                            <CollectionView.EmptyView>
+                                <VerticalStackLayout Padding="16" HorizontalOptions="Center" Spacing="8">
+                                    <Image Source="empty_transcript.png" WidthRequest="48" HeightRequest="48" />
+                                    <Label Text="Aucune transcription" FontSize="14" FontAttributes="Bold" />
+                                    <Label Text="Aucune transcription générée pour l’instant." FontSize="13" TextColor="#667085" />
+                                </VerticalStackLayout>
+                            </CollectionView.EmptyView>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Border StrokeShape="RoundRectangle 12" Padding="8" Margin="0,4">
+                                        <VerticalStackLayout Spacing="6">
+                                            <Label Text="{Binding FileName}" FontAttributes="Bold" FontSize="13" />
+                                            <HorizontalStackLayout Spacing="12">
+                                                <ImageButton Source="download_icon.png"
+                                     Command="{Binding Source={x:Reference RootPage}, Path=BindingContext.DownloadFileCommand}"
+                                     CommandParameter="{Binding .}" WidthRequest="20" />
+                                                <ImageButton Source="trash_icon.png"
+                                     Command="{Binding Source={x:Reference RootPage}, Path=BindingContext.DeleteFileCommand}"
+                                     CommandParameter="{Binding .}" WidthRequest="20" />
+                                            </HorizontalStackLayout>
+                                        </VerticalStackLayout>
+                                    </Border>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </VerticalStackLayout>
+                </Border>  
 
                <!-- Résumés -->  
-               <Border StrokeShape="RoundRectangle 12" Padding="16" WidthRequest="300">  
-                   <VerticalStackLayout>  
-                       <Label Text="Résumés" FontAttributes="Bold" FontSize="14" />  
-                       <StackLayout>  
-                           <HorizontalStackLayout Spacing="8" VerticalOptions="Center">  
-                               <Image Source="summary_icon.png" WidthRequest="20" HeightRequest="20" />  
-                               <Label Text="Meeting-001_summary.txt" />  
-                               <Label Text="27/04/2025" TextColor="#98A2B3" />  
-                               <ImageButton Source="download_icon.png" WidthRequest="20" />  
-                               <ImageButton Source="trash_icon.png" WidthRequest="20" />  
-                           </HorizontalStackLayout>  
-                       </StackLayout>  
-                   </VerticalStackLayout>  
-               </Border>  
+               <Border StrokeShape="RoundRectangle 12" Padding="16" WidthRequest="300">
+                    <VerticalStackLayout>
+                        <Label Text="Résumés" FontAttributes="Bold" FontSize="14" />
+                        <CollectionView ItemsSource="{Binding SummaryFiles}"
+                SelectionMode="Single"
+                SelectionChangedCommand="{Binding SelectFileCommand}"
+                SelectionChangedCommandParameter="{Binding SelectedItem, Mode=OneWay}">
+                            <CollectionView.EmptyView>
+                                <VerticalStackLayout Padding="16" HorizontalOptions="Center" Spacing="8">
+                                    <Image Source="empty_summary.png" WidthRequest="48" HeightRequest="48" />
+                                    <Label Text="Aucun résumé" FontSize="14" FontAttributes="Bold" />
+                                    <Label Text="Lancez un résumé après la transcription pour le voir ici." FontSize="13" TextColor="#667085" />
+                                </VerticalStackLayout>
+                            </CollectionView.EmptyView>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Border StrokeShape="RoundRectangle 12" Padding="8" Margin="0,4">
+                                        <VerticalStackLayout Spacing="6">
+                                            <Label Text="{Binding FileName}" FontAttributes="Bold" FontSize="13" />
+                                            <HorizontalStackLayout Spacing="12">
+                                                <ImageButton Source="download_icon.png"
+                                     Command="{Binding Source={x:Reference RootPage}, Path=BindingContext.DownloadFileCommand}"
+                                     CommandParameter="{Binding .}" WidthRequest="20" />
+                                                <ImageButton Source="trash_icon.png"
+                                     Command="{Binding Source={x:Reference RootPage}, Path=BindingContext.DeleteFileCommand}"
+                                     CommandParameter="{Binding .}" WidthRequest="20" />
+                                            </HorizontalStackLayout>
+                                        </VerticalStackLayout>
+                                    </Border>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </VerticalStackLayout>
+                </Border>  
            </HorizontalStackLayout>  
 
            <!-- Footer -->  
