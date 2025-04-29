@@ -1,5 +1,5 @@
 import json
-import pytest
+import unittest
 from pathlib import Path
 from meeting_manager import MeetingManager
 
@@ -11,6 +11,7 @@ def test_initial_empty(tmp_path):
     # The directory and JSON file should be created
     assert storage_dir.exists()
     meetings_file = storage_dir / "meetings.json"
+
     assert meetings_file.exists()
 
     # list_all should return an empty list initially

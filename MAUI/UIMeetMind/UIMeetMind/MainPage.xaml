@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"  
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+            x:Class="UIMeetMind.MainPage"  
+            xmlns:vm="clr-namespace:UIMeetMind.ViewModels"  
+            BackgroundColor="#FCFCFD">  
+
+   <ScrollView>  
+       <VerticalStackLayout Padding="24" Spacing="24">  
+
+           <!-- Header -->  
+           <Grid ColumnDefinitions="Auto,*" Padding="0,12" VerticalOptions="Center">  
+               <Border WidthRequest="48" HeightRequest="48" BackgroundColor="#E3D5FF" StrokeShape="RoundRectangle 24" Padding="0" VerticalOptions="Center">  
+                   <Label Text="M" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center" TextColor="#7F56D9" FontAttributes="Bold" />  
+               </Border>  
+               <VerticalStackLayout Padding="12,0,0,0">  
+                   <Label Text="MeetMind" FontSize="20" FontAttributes="Bold" TextColor="#101828" />  
+                   <Label Text="Control Center" FontSize="13" TextColor="#667085" />  
+                   <Label Text="Version 1.0" HorizontalOptions="Center" VerticalOptions="Center" FontSize="12" TextColor="#98A2B3" />  
+               </VerticalStackLayout>  
+           </Grid>  
+
+           <!-- Status Card -->  
+           <Border BackgroundColor="#EDE9FE" StrokeShape="RoundRectangle 16" Padding="24">  
+               <VerticalStackLayout Spacing="12" HorizontalOptions="Center">  
+                   <Label Text="Prêt à enregistrer" FontSize="18" FontAttributes="Bold" TextColor="#344054" HorizontalOptions="Center" />  
+                   <Button Text="▶ Démarrer l'enregistrement"  
+                           Command="{Binding StartRecordingCommand}"  
+                           BackgroundColor="#7F56D9" TextColor="White" Padding="16,8"  
+                           CornerRadius="8" FontAttributes="Bold" WidthRequest="220" />  
+               </VerticalStackLayout>  
+           </Border>  
+
+           <!-- Réunions Section -->  
+           <Border StrokeShape="RoundRectangle 12" Padding="16" Stroke="#E4E7EC">  
+               <VerticalStackLayout Spacing="16">  
+                   <Grid HorizontalOptions="Fill" VerticalOptions="Start">  
+                       <Grid.ColumnDefinitions>  
+                           <ColumnDefinition Width="1*" />  
+                           <ColumnDefinition Width="1*" />  
+                       </Grid.ColumnDefinitions>  
+                       <Label Text="Réunions" HorizontalOptions="Start" VerticalOptions="Start"  
+                              FontSize="16" FontAttributes="Bold" TextColor="#101828" />  
+                       <Button Grid.Column="1" Text="Actualiser" HorizontalOptions="End" VerticalOptions="Start"  
+                               Command="{Binding RefreshMeetingsCommand}" FontSize="13"  
+                               BackgroundColor="#F2F4F7" TextColor="#344054" CornerRadius="8" />  
+                   </Grid>  
+
+                   <Grid ColumnDefinitions="*,*,*,Auto" RowSpacing="8">  
+                       <Grid.RowDefinitions>  
+                           <RowDefinition Height="Auto" />  
+                           <RowDefinition Height="Auto" />  
+                           <RowDefinition Height="Auto" />  
+                       </Grid.RowDefinitions>  
+                       <Label Text="ID" FontAttributes="Bold" Grid.Column="0" />  
+                       <Label Text="DATE" FontAttributes="Bold" Grid.Column="1" />  
+                       <Label Text="STATUT" FontAttributes="Bold" Grid.Column="2" />  
+                       <Label Text="ACTIONS" FontAttributes="Bold" Grid.Column="3" />  
+
+                       <!-- Sample items repeated in real app via CollectionView -->  
+                       <Label Text="MEET-001" Grid.Row="1" Grid.Column="0" />  
+                       <Label Text="2025-04-27" Grid.Row="1" Grid.Column="1" />  
+                       <Label Text="Résumé" TextColor="Purple" Grid.Row="1" Grid.Column="2" />  
+                       <HorizontalStackLayout Grid.Row="1" Grid.Column="3" Spacing="8">  
+                           <ImageButton Source="doc_icon.png" WidthRequest="20" HeightRequest="20" />  
+                           <ImageButton Source="trash_icon.png" WidthRequest="20" HeightRequest="20" />  
+                       </HorizontalStackLayout>  
+                   </Grid>  
+               </VerticalStackLayout>  
+           </Border>  
+
+           <!-- Files Section -->  
+           <HorizontalStackLayout Spacing="16">  
+               <!-- Fichiers Audio -->  
+               <Border StrokeShape="RoundRectangle 12" Padding="16" WidthRequest="300">  
+                   <VerticalStackLayout>  
+                       <Label Text="Fichiers Audio" FontAttributes="Bold" FontSize="14" />  
+                       <CollectionView ItemsSource="{Binding AudioFiles}" SelectionMode="Single" SelectionChangedCommand="{Binding SelectFileCommand}" SelectionChangedCommandParameter="{Binding SelectedItem, Mode=OneWay}">  
+                           
+                       </CollectionView>  
+                   </VerticalStackLayout>  
+               </Border>  
+
+               <!-- Transcriptions -->  
+               <Border StrokeShape="RoundRectangle 12" Padding="16" WidthRequest="300">  
+                   <VerticalStackLayout>  
+                       <Label Text="Transcriptions" FontAttributes="Bold" FontSize="14" />  
+                       <StackLayout>  
+                           <HorizontalStackLayout Spacing="8" VerticalOptions="Center">  
+                               <Image Source="txt_icon.png" WidthRequest="20" HeightRequest="20" />  
+                               <Label Text="Meeting-001_transcript.txt" />  
+                               <Label Text="27/04/2025" TextColor="#98A2B3" />  
+                               <ImageButton Source="download_icon.png" WidthRequest="20" />  
+                               <ImageButton Source="trash_icon.png" WidthRequest="20" />  
+                           </HorizontalStackLayout>  
+                       </StackLayout>  
+                   </VerticalStackLayout>  
+               </Border>  
+
+               <!-- Résumés -->  
+               <Border StrokeShape="RoundRectangle 12" Padding="16" WidthRequest="300">  
+                   <VerticalStackLayout>  
+                       <Label Text="Résumés" FontAttributes="Bold" FontSize="14" />  
+                       <StackLayout>  
+                           <HorizontalStackLayout Spacing="8" VerticalOptions="Center">  
+                               <Image Source="summary_icon.png" WidthRequest="20" HeightRequest="20" />  
+                               <Label Text="Meeting-001_summary.txt" />  
+                               <Label Text="27/04/2025" TextColor="#98A2B3" />  
+                               <ImageButton Source="download_icon.png" WidthRequest="20" />  
+                               <ImageButton Source="trash_icon.png" WidthRequest="20" />  
+                           </HorizontalStackLayout>  
+                       </StackLayout>  
+                   </VerticalStackLayout>  
+               </Border>  
+           </HorizontalStackLayout>  
+
+           <!-- Footer -->  
+           <Label Text="© 2025 MeetMind - Solution d'enregistrement et de transcription de réunions"  
+                  FontSize="12" TextColor="#98A2B3" HorizontalOptions="Center" Margin="0,32,0,0" />  
+
+       </VerticalStackLayout>  
+   </ScrollView>  
+
+</ContentPage>

@@ -1,68 +1,82 @@
 import sys
-# Make sure Python can find main.py and les modules du backend
-sys.path.append("..")
-
 import os
 import shutil
-import pytest
+import unittest
+from unittest.mock import patch
 from fastapi.testclient import TestClient
 from main import app
 
 client = TestClient(app)
 
-@pytest.fixture(autouse=True)
-def cleanup_storage():
-    # Nettoie le dossier storage avant et après chaque test
-    if os.path.exists("storage"):
-        shutil.rmtree("storage")
-    yield
-    if os.path.exists("storage"):
-        shutil.rmtree("storage")
+class TestAPIEndpoints(unittest.TestCase):
 
-def test_health():
-    response = client.get("/health")
-    assert response.status_code == 200
-    assert response.json() == {"status": "ok"}
+    @classmethod
+    def setUpClass(cls):
+        # Nettoie le dossier storage avant tous les tests
+        if os.path.exists("storage"):
+            shutil.rmtree("storage")
 
-def test_empty_meetings():
-    response = client.get("/meetings")
-    assert response.status_code == 200
-    assert response.json() == []
+    @classmethod
+    def tearDownClass(cls):
+        # Nettoie le dossier storage après tous les tests
+        if os.path.exists("storage"):
+            shutil.rmtree("storage")
 
-def test_start_stop_and_delete_meeting(monkeypatch):
-    # Stub pour éviter l'accès au micro
-    monkeypatch.setattr("recorder.recorder.start_streaming_recording", lambda filename: None)
-    monkeypatch.setattr("recorder.recorder.stop_streaming_recording", lambda: None)
+    def setUp(self):
+        # Nettoie le dossier storage avant chaque test
+        if os.path.exists("storage"):
+            shutil.rmtree("storage")
 
-    # Start recording
-    response = client.post("/start_record")
-    assert response.status_code == 200
-    meeting_id = response.json()["meeting_id"]
-    assert isinstance(meeting_id, str)
+    def tearDown(self):
+        # Nettoie le dossier storage après chaque test
+        if os.path.exists("storage"):
+            shutil.rmtree("storage")
 
-    # Vérifie que la réunion est listée en In Progress
-    response = client.get("/meetings")
-    assert response.status_code == 200
-    assert {"meeting_id": meeting_id, "status": "In Progress"} in response.json()
+    def test_health(self):
+        response = client.get("/health")
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json(), {"status": "ok"})
 
-    # Stop recording
-    response = client.post("/stop_record", json={"meeting_id": meeting_id})
-    assert response.status_code == 200
-    assert response.json()["meeting_id"] == meeting_id
+    def test_empty_meetings(self):
+        response = client.get("/meetings")
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json(), [])
 
-    # Vérifie que le statut passe à Completed
-    response = client.get(f"/meetings/{meeting_id}")
-    assert response.status_code == 200
-    details = response.json()
-    assert details["meeting_id"] == meeting_id
-    assert details["status"] == "Completed"
-    assert "end_timestamp" in details
+    @patch("recorder.recorder.start_streaming_recording", lambda filename: None)
+    @patch("recorder.recorder.stop_streaming_recording", lambda: None)
+    def test_start_stop_and_delete_meeting(self):
+        # Start recording
+        response = client.post("/start_record")
+        self.assertEqual(response.status_code, 200)
+        meeting_id = response.json()["meeting_id"]
+        self.assertIsInstance(meeting_id, str)
 
-    # Suppression de la réunion
-    response = client.delete(f"/meetings/{meeting_id}")
-    assert response.status_code == 200
-    assert response.json()["detail"] == "Meeting deleted."
+        # Vérifie que la réunion est listée en In Progress
+        response = client.get("/meetings")
+        self.assertEqual(response.status_code, 200)
+        self.assertIn({"meeting_id": meeting_id, "status": "In Progress"}, response.json())
 
-    # Vérifie que la suppression renvoie 404
-    response = client.get(f"/meetings/{meeting_id}")
-    assert response.status_code == 404
+        # Stop recording
+        response = client.post("/stop_record", json={"meeting_id": meeting_id})
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json()["meeting_id"], meeting_id)
+
+        # Vérifie que le statut passe à Completed
+        response = client.get(f"/meetings/{meeting_id}")
+        self.assertEqual(response.status_code, 200)
+        details = response.json()
+        self.assertEqual(details["meeting_id"], meeting_id)
+        self.assertEqual(details["status"], "Completed")
+        self.assertIn("end_timestamp", details)
+
+        # Suppression de la réunion
+        response = client.delete(f"/meetings/{meeting_id}")
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json()["detail"], "Meeting deleted.")
+
+        # Vérifie que la suppression renvoie 404
+        response = client.get(f"/meetings/{meeting_id}")
+        self.assertEqual(response.status_code, 404)
+
+if __name__ == "__main__":
+    unittest.main()
