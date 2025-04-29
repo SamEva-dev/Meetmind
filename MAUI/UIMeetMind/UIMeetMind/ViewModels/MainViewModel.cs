@@ -6,12 +6,17 @@ using CommunityToolkit.Mvvm.Input;
 using UIMeetMind.Models;
 using UIMeetMind.Services;
 using UIMeetMind.Utils;
+using Microsoft.Maui.Media;
+using Plugin.Maui.Audio;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using Microsoft.Maui.Storage;
 
 namespace UIMeetMind.ViewModels;
 
 public partial class MainViewModel : ObservableObject
 {
     private readonly ApiService _apiService;
+    private readonly IAudioManager _audioManager;
 
     public ObservableCollection<MeetingModel> Meetings { get; } = new();
     public ObservableCollection<MeetingFile> AudioFiles { get; } = new();
@@ -27,15 +32,44 @@ public partial class MainViewModel : ObservableObject
     [ObservableProperty]
     private bool _hasRecordingInProgress;
 
+    [ObservableProperty]
+    private string _meetingId;
 
-    public MainViewModel(ApiService apiService)
+    [ObservableProperty]
+    private string _status;
+
+    [ObservableProperty]
+
+    private string _startTimestamp;
+
+    [ObservableProperty]
+    private string _endTimestamp;
+
+
+    public MainViewModel(ApiService apiService, IAudioManager audioManager)
     {
         _apiService = apiService;
-
+        _audioManager = audioManager;
         LoadMeetingsAsync();
-        //RefreshMeetingsCommand = new AsyncRelayCommand(LoadMeetingsAsync);
-        //StartRecordingCommand = new AsyncRelayCommand(StartRecordingAsync);
-        //StopRecordingCommand = new AsyncRelayCommand(StopRecordingAsync);
+
+        AudioFiles = new ObservableCollection<MeetingFile>
+        {
+            new MeetingFile(){FileName="Meeting-001.wav", Date=new DateTime(2025,4,28)},
+            new MeetingFile(){FileName="Meeting-002.wav", Date=new DateTime(2025,4,28)},
+            new MeetingFile(){FileName="Meeting-003.wav", Date=new DateTime(2025,4,28)},
+        };
+
+        TranscriptFiles = new ObservableCollection<MeetingFile>
+        {
+            new MeetingFile(){FileName="Meeting-001_transcript.txt", Date=new DateTime(2025,4,27) },
+
+            new MeetingFile() { FileName = "Meeting-002_transcript.txt", Date = new DateTime(2025, 4, 28) },
+        };
+
+        SummaryFiles = new ObservableCollection<MeetingFile>
+        {
+            new MeetingFile() { FileName =  "Meeting-001_summary.txt", Date = new DateTime(2025, 4, 27) },
+        };
     }
 
     [RelayCommand]
@@ -43,7 +77,8 @@ public partial class MainViewModel : ObservableObject
     {
         try
         {
-            if (IsBusy) return;
+            //if (IsBusy) return;
+           
             IsBusy = true;
             var list = await _apiService.GetMeetingsAsync();
             Meetings.Clear();
@@ -52,7 +87,6 @@ public partial class MainViewModel : ObservableObject
                 Meetings.Add(m);
             }
             HasRecordingInProgress = Meetings.Any(m => m.Status == "In Progress");
-            IsBusy = false;
         } catch (Exception ex) {
                 LoggerConfig.Logger.Error(ex, "Erreur lors du chargement des réunions");
                 await ShowToastAsync("Erreur lors du chargement des réunions", true);
@@ -69,9 +103,14 @@ public partial class MainViewModel : ObservableObject
         {
             //if (IsBusy) return;
             //IsBusy = true;
-            var id = await _apiService.StartRecordingAsync();
-            await LoadMeetingsAsync();
-            // IsBusy = false;
+            HasRecordingInProgress = true;
+            if (IsBusy) return;
+            IsBusy = true;
+           // await _apiService.StartRecordingAsync();
+           // await LoadMeetingsAsync();
+            await PlaySoundAsync("start_recording.wav");
+            await ShowToastAsync("Enregistrement démarré");
+            LoggerConfig.Logger.Information("Enregistrement démarré");
         }
         catch (Exception ex)
         {
@@ -90,16 +129,19 @@ public partial class MainViewModel : ObservableObject
     {
         try
         {
-            //if (IsBusy) return;
-            //IsBusy = true;
-            // Assuming the last started meeting is in progress
+            if (IsBusy) return;
+            IsBusy = true;
+            HasRecordingInProgress = false;
             var toStop = Meetings.FirstOrDefault(m => m.Status == "In Progress")?.MeetingId;
             if (!string.IsNullOrEmpty(toStop))
             {
                 await _apiService.StopRecordingAsync(toStop);
                 await LoadMeetingsAsync();
+                HasRecordingInProgress = true;
+                await PlaySoundAsync("stop_recording.wav");
+                await ShowToastAsync("Enregistrement arrêté");
+                LoggerConfig.Logger.Information("Enregistrement arrêté");
             }
-            //IsBusy = false;
         }
         catch (Exception ex)
         {
@@ -124,7 +166,7 @@ public partial class MainViewModel : ObservableObject
             await _apiService.TranscribeMeetingAsync(id);
             await LoadMeetingsAsync();
             await ShowToastAsync("Transcription lancée !");
-            IsBusy = false;
+            LoggerConfig.Logger.Information("Transcription lancée pour {Id}", id);
         }
         catch (Exception ex)
         {
@@ -148,7 +190,7 @@ public partial class MainViewModel : ObservableObject
             var id = ExtractMeetingId(SelectedFile.FileName);
             await _apiService.SummarizeMeetingAsync(id);
             await LoadMeetingsAsync();
-            IsBusy = false;
+            LoggerConfig.Logger.Information("Résumé généré pour {Id}", id);
         }
         catch (Exception ex)
         {
@@ -170,6 +212,7 @@ public partial class MainViewModel : ObservableObject
             var id = ExtractMeetingId(SelectedFile.FileName);
             var result = await _apiService.GetMeetingResultsAsync(id);
             await Application.Current.MainPage.DisplayAlert("Résultat", result, "OK");
+            LoggerConfig.Logger.Information("Affichage des résultats pour {Id}", id);
         }
         catch (Exception ex)
         {
@@ -186,6 +229,7 @@ public partial class MainViewModel : ObservableObject
             if (file == null) return;
             await _apiService.DownloadFileAsync(file.FilePath);
             await ShowToastAsync("Fichier téléchargé");
+            LoggerConfig.Logger.Information("Fichier téléchargé: {Path}", file.FilePath);
         }
         catch (Exception ex)
         {
@@ -203,6 +247,7 @@ public partial class MainViewModel : ObservableObject
             await _apiService.DeleteFileAsync(file.FilePath);
             await LoadAllFilesAsync();
             await ShowToastAsync("Fichier supprimé !");
+            LoggerConfig.Logger.Information("Fichier supprimé: {Path}", file.FilePath);
         }
         catch (Exception ex)
         {
@@ -262,5 +307,17 @@ public partial class MainViewModel : ObservableObject
         await snackbar.Show();
     }
 
-
+    private async Task PlaySoundAsync(string fileName)
+    {
+        try
+        {
+            var stream = await FileSystem.OpenAppPackageFileAsync(fileName);
+            var player = _audioManager.CreatePlayer(stream);
+            player.Play();
+        }
+        catch (Exception ex)
+        {
+            LoggerConfig.Logger.Warning(ex, "Impossible de jouer le son {file}", fileName);
+        }
+    }
 }

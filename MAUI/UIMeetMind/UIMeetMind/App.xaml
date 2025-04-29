@@ -11,6 +11,9 @@
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
             <conv:InverseBooleanConverter x:Key="InverseBooleanConverter" />
+            <conv:StatutToColorConverter  x:Key="StatutToColorConverter" />
+            <conv:StatutToTextColorConverter  x:Key="StatutToTextColorConverter" />
         </ResourceDictionary>
     </Application.Resources>
+    
 </Application>

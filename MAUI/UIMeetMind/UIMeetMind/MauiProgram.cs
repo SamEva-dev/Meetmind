@@ -1,5 +1,7 @@
-﻿using CommunityToolkit.Maui;
+﻿using Berry.Maui;
+using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
+using Plugin.Maui.Audio;
 using UIMeetMind.Services;
 using UIMeetMind.Utils;
 using UIMeetMind.ViewModels;
@@ -15,7 +17,7 @@ namespace UIMeetMind
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
-                .UseMauiCommunityToolkit()
+                .UseMauiCommunityToolkit(options => options.SetShouldEnableSnackbarOnWindows(true))
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -23,6 +25,7 @@ namespace UIMeetMind
                 });
 
             builder.Services
+                .AddSingleton(AudioManager.Current)
            .AddSingleton<MainViewModel>()
            .AddSingleton<MainPage>()
             .AddSingleton<ApiService>();

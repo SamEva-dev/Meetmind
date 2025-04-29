@@ -57,13 +57,17 @@
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+
+		<MauiAsset Include="Resources\Audios\*.mp3" />
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Berry.Maui.MediaElement" Version="1.4.1" />
 		<PackageReference Include="CommunityToolkit.Maui" Version="9.1.1" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
+		<PackageReference Include="Plugin.Maui.Audio" Version="3.1.1" />
 		<PackageReference Include="Serilog" Version="4.2.0" />
 		<PackageReference Include="Serilog.Extensions.Hosting" Version="9.0.0" />
 		<PackageReference Include="Serilog.Extensions.Logging" Version="9.0.1" />

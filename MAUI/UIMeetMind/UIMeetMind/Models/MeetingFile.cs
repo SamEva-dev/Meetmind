@@ -10,5 +10,6 @@ public class MeetingFile
 {
     public string FileName { get; set; }
     public string FilePath { get; set; }
-    public string Type { get; set; } // audio, transcript, summary
+    public string Type { get; set; } 
+    public DateTime Date { get; set; }
 }

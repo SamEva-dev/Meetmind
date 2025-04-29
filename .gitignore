@@ -546,3 +546,5 @@ tools
 .env
 
 .DS_Store
+# audio
+*.mp3

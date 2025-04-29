@@ -41,67 +41,70 @@ class MeetingManager:
         except Exception as e:
             logger.error(f"Failed to save meetings to {self.filepath}: {e}", exc_info=True)
 
-    def create(self, meeting_id: str):
+    def create(self, meetingId: str):
         """Create a new meeting entry with initial status 'In Progress'."""
         meetings = self._load()
-        existing = next((m for m in meetings if m.get("meeting_id") == meeting_id), None)
+        existing = next((m for m in meetings if m.get("meetingId") == meetingId), None)
         if existing:
-            logger.warning(f"Meeting {meeting_id} already exists. Skipping creation.")
+            logger.warning(f"Meeting {meetingId} already exists. Skipping creation.")
             return existing
 
         new_meeting = {
-            "meeting_id": meeting_id,
+            "meetingId": meetingId,
             "status": "In Progress",
-            "start_timestamp": datetime.datetime.utcnow().isoformat() + 'Z',
-            "end_timestamp": None,
-            "transcript_path": None,
-            "summary_path": None
+            "startTimestamp": datetime.datetime.utcnow().isoformat() + 'Z',
+            "endTimestamp": '',
+            "transcriptPath": '',
+            "summaryPath": ''
         }
         meetings.append(new_meeting)
         self._save(meetings)
-        logger.info(f"Created meeting record: {meeting_id}")
+        logger.info(f"Created meeting record: {meetingId}")
         return new_meeting
 
-    def update_status(self, meeting_id: str, status: str, **kwargs):
+    def update_status(self, meetingId: str, status: str, **kwargs):
         """Update the status of an existing meeting and optional metadata."""
         meetings = self._load()
         for m in meetings:
-            if m.get("meeting_id") == meeting_id:
+            if m.get("meetingId") == meetingId:
                 m["status"] = status
                 # Optionally update timestamp or file paths
                 if status == "Completed":
-                    m["end_timestamp"] = datetime.datetime.utcnow().isoformat() + 'Z'
-                if "transcript_path" in kwargs:
-                    m["transcript_path"] = kwargs.get("transcript_path")
-                if "summary_path" in kwargs:
-                    m["summary_path"] = kwargs.get("summary_path")
+                    m["endTimestamp"] = datetime.datetime.utcnow().isoformat() + 'Z'
+                if "transcriptPath" in kwargs:
+                    m["transcriptPath"] = kwargs.get("transcriptPath")
+                if "summaryPath" in kwargs:
+                    m["summaryPath"] = kwargs.get("summaryPath")
                 self._save(meetings)
-                logger.info(f"Updated meeting {meeting_id} to status '{status}'")
+                logger.info(f"Updated meeting {meetingId} to status '{status}'")
                 return m
-        logger.error(f"Meeting {meeting_id} not found for status update.")
+        logger.error(f"Meeting {meetingId} not found for status update.")
         return None
 
     def list_all(self):
         """Return a list of all meetings with basic info."""
         meetings = self._load()
         # Return only ID and status
-        return [{"meeting_id": m.get("meeting_id"), "status": m.get("status")} for m in meetings]
+        return [{"meetingId": m.get("meetingId"), "status": m.get("status")} for m in meetings]
 
-    def get(self, meeting_id: str):
+    def get(self, meetingId: str):
         """Return full details of a single meeting."""
+        
         meetings = self._load()
-        meeting = next((m for m in meetings if m.get("meeting_id") == meeting_id), None)
+        logger.info(f"meetings: {meetings}")
+        meeting = next((m for m in meetings if m.get("meetingId") == meetingId), None)
+        logger.warning(f"Meeting {meetingId} ******************** found.")
         if not meeting:
-            logger.warning(f"Meeting {meeting_id} not found.")
+            logger.warning(f"Meeting {meetingId} not found.")
         return meeting
 
-    def delete(self, meeting_id: str):
+    def delete(self, meetingId: str):
         """Delete a meeting record from the store."""
         meetings = self._load()
-        filtered = [m for m in meetings if m.get("meeting_id") != meeting_id]
+        filtered = [m for m in meetings if m.get("meetingId") != meetingId]
         if len(filtered) == len(meetings):
-            logger.warning(f"Meeting {meeting_id} not found. Nothing to delete.")
+            logger.warning(f"Meeting {meetingId} not found. Nothing to delete.")
             return False
         self._save(filtered)
-        logger.info(f"Deleted meeting record: {meeting_id}")
+        logger.info(f"Deleted meeting record: {meetingId}")
         return True

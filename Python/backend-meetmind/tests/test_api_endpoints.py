@@ -48,34 +48,34 @@ class TestAPIEndpoints(unittest.TestCase):
         # Start recording
         response = client.post("/start_record")
         self.assertEqual(response.status_code, 200)
-        meeting_id = response.json()["meeting_id"]
-        self.assertIsInstance(meeting_id, str)
+        meetingId = response.json()["meetingId"]
+        self.assertIsInstance(meetingId, str)
 
         # Vérifie que la réunion est listée en In Progress
         response = client.get("/meetings")
         self.assertEqual(response.status_code, 200)
-        self.assertIn({"meeting_id": meeting_id, "status": "In Progress"}, response.json())
+        self.assertIn({"meetingId": meetingId, "status": "In Progress"}, response.json())
 
         # Stop recording
-        response = client.post("/stop_record", json={"meeting_id": meeting_id})
+        response = client.post("/stop_record", json={"meetingId": meetingId})
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json()["meeting_id"], meeting_id)
+        self.assertEqual(response.json()["meetingId"], meetingId)
 
         # Vérifie que le statut passe à Completed
-        response = client.get(f"/meetings/{meeting_id}")
+        response = client.get(f"/meetings/{meetingId}")
         self.assertEqual(response.status_code, 200)
         details = response.json()
-        self.assertEqual(details["meeting_id"], meeting_id)
+        self.assertEqual(details["meetingId"], meetingId)
         self.assertEqual(details["status"], "Completed")
-        self.assertIn("end_timestamp", details)
+        self.assertIn("endTimestamp", details)
 
         # Suppression de la réunion
-        response = client.delete(f"/meetings/{meeting_id}")
+        response = client.delete(f"/meetings/{meetingId}")
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json()["detail"], "Meeting deleted.")
 
         # Vérifie que la suppression renvoie 404
-        response = client.get(f"/meetings/{meeting_id}")
+        response = client.get(f"/meetings/{meetingId}")
         self.assertEqual(response.status_code, 404)
 
 if __name__ == "__main__":

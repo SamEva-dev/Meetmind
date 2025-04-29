@@ -28,24 +28,24 @@ public class ApiService
         var response = await _httpClient.PostAsJsonAsync("/start_record", new { });
         response.EnsureSuccessStatusCode();
         var result = await response.Content.ReadFromJsonAsync<Dictionary<string, string>>();
-        return result["meeting_id"];
+        return result["meetingId"];
     }
 
     public async Task StopRecordingAsync(string meetingId)
     {
-        var response = await _httpClient.PostAsJsonAsync("/stop_record", new { meeting_id = meetingId });
+        var response = await _httpClient.PostAsJsonAsync("/stop_record", new { meetingId = meetingId });
         response.EnsureSuccessStatusCode();
     }
 
     public async Task TranscribeMeetingAsync(string meetingId)
     {
-        var response = await _httpClient.PostAsJsonAsync("/transcribe", new { meeting_id = meetingId });
+        var response = await _httpClient.PostAsJsonAsync("/transcribe", new { meetingId = meetingId });
         response.EnsureSuccessStatusCode();
     }
 
     public async Task SummarizeMeetingAsync(string meetingId)
     {
-        var response = await _httpClient.PostAsJsonAsync("/summarize", new { meeting_id = meetingId });
+        var response = await _httpClient.PostAsJsonAsync("/summarize", new { meetingId = meetingId });
         response.EnsureSuccessStatusCode();
     }
 
@@ -54,7 +54,7 @@ public class ApiService
         var response = await _httpClient.GetAsync($"/meetings/{meetingId}");
         response.EnsureSuccessStatusCode();
         var data = await response.Content.ReadFromJsonAsync<Dictionary<string, object>>();
-        return $"Status: {data["status"]}\nTranscript: {data["transcript_path"]}\nSummary: {data["summary_path"]}";
+        return $"Status: {data["status"]}\nTranscript: {data["transcriptPath"]}\nSummary: {data["summaryPath"]}";
     }
 
     public async Task<List<MeetingFile>> ListAllFilesAsync()

@@ -48,10 +48,11 @@ class MeetingInfo(BaseModel):
     status: str
 
 class MeetingDetail(MeetingInfo):
-    start_timestamp: str
-    end_timestamp: str = None
-    transcript_path: str = None
-    summary_path: str = None
+    meetingId: str
+    startTimestamp: str=''
+    endTimestamp: str=''
+    transcriptPath: str=''
+    summaryPath: str=''
 
 # --- health check ---
 @app.get("/health")
@@ -99,8 +100,8 @@ async def transcribe_endpoint(meeting: MeetingResponse):
     try:
         transcript = transcribe_audio(meeting.meetingId)
         # Update meeting status and transcript path
-        transcript_path = f"storage/{meeting.meetingId}.txt"
-        meeting_manager.update_status(meeting.meetingId, "Transcribed", transcript_path=transcript_path)
+        transcriptPath = f"storage/{meeting.meetingId}.txt"
+        meeting_manager.update_status(meeting.meetingId, "Transcribed", transcriptPath=transcriptPath)
         logger.info(f"Transcription successful for ID: {meeting.meetingId}")
         return {"meetingId": meeting.meetingId, "transcript": transcript}
     except FileNotFoundError as fnf:
@@ -117,8 +118,8 @@ async def summarize_endpoint(meeting: MeetingResponse):
     try:
         summary = summarize_text(meeting.meetingId)
         # Update meeting status and summary path
-        summary_path = f"storage/{meeting.meetingId}_summary.txt"
-        meeting_manager.update_status(meeting.meetingId, "Summarized", summary_path=summary_path)
+        summaryPath = f"storage/{meeting.meetingId}_summary.txt"
+        meeting_manager.update_status(meeting.meetingId, "Summarized", summaryPath=summaryPath)
         logger.info(f"Summarization successful for ID: {meeting.meetingId}")
         return {"meetingId": meeting.meetingId, "summary": summary}
     except FileNotFoundError as fnf:
@@ -138,6 +139,8 @@ async def list_meetings():
 async def get_meeting(meetingId: str):
     logger.info(f"Retrieving details for meeting ID: {meetingId}")
     meeting = meeting_manager.get(meetingId)
+
+    logger.info(f"Retrieving details for meeting FOUND ******************: {meeting}")
     if not meeting:
         raise HTTPException(status_code=404, detail="Meeting not found.")
     return meeting
