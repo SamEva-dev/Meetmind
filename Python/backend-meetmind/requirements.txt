@@ -4,6 +4,7 @@ pydantic
 faster-whisper
 python-dotenv
 sounddevice
+soundfile
 numpy
 transformers
 torch
@@ -13,3 +14,4 @@ google-auth-oauthlib
 pytz
 httpx
 pytest
+openai==0.28

@@ -26,6 +26,7 @@ async def calendar_monitor():
             for start_str, summary in events:
                 try:
                     event_start = datetime.datetime.fromisoformat(start_str.replace('Z', '+00:00'))
+                    event_start = event_start.replace(tzinfo=pytz.utc)  # Ensure event_start is timezone-aware
                     time_until_start = (event_start - now).total_seconds() / 60
 
                     event_key = f"{event_start.isoformat()}_{summary}"
