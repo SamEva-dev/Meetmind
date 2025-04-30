@@ -8,7 +8,7 @@
     BackgroundColor="#FCFCFD">
 
     <ContentPage.Resources>
-        <!-- Par exemple un style pour les titres de carte -->
+        <!--  Par exemple un style pour les titres de carte  -->
         <Style x:Key="CardTitleStyle" TargetType="Label">
             <Setter Property="FontSize" Value="18" />
             <Setter Property="FontAttributes" Value="Bold" />
@@ -269,10 +269,14 @@
                 <!--  Fichiers Audio  -->
                 <Border
                     Padding="16"
+                    
                     StrokeShape="RoundRectangle 12"
                     WidthRequest="300">
                     <VerticalStackLayout>
-                        <Label Style="{StaticResource CardTitleStyle}" Text="Fichiers Audio" />
+                        <Label
+                            Margin="0,0,0,10"
+                            Style="{StaticResource CardTitleStyle}"
+                            Text="Fichiers Audio" />
 
                         <CollectionView
                             ItemsSource="{Binding AudioFiles}"
@@ -286,7 +290,7 @@
                                     Spacing="8">
                                     <Image
                                         HeightRequest="48"
-                                        Source="empty_audio.png"
+                                        Source="empty_set.png"
                                         WidthRequest="48" />
                                     <Label
                                         FontAttributes="Bold"
@@ -300,38 +304,61 @@
                             </CollectionView.EmptyView>
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
-                                    <Border
-                                        Margin="0,4"
-                                        Padding="8"
-                                        StrokeShape="RoundRectangle 12">
-                                        <VerticalStackLayout Spacing="6">
-                                            <Label
-                                                FontAttributes="Bold"
-                                                FontSize="13"
-                                                Text="{Binding FileName}" />
-                                            <HorizontalStackLayout Spacing="12">
-                                                <ImageButton
-                                                    Command="{Binding Source={x:Reference RootPage}, Path=BindingContext.DownloadFileCommand}"
-                                                    CommandParameter="{Binding .}"
-                                                    Source="download_icon.png"
-                                                    WidthRequest="20" />
-                                                <ImageButton
-                                                    Command="{Binding Source={x:Reference RootPage}, Path=BindingContext.DeleteFileCommand}"
-                                                    CommandParameter="{Binding .}"
-                                                    Source="trash_icon.png"
-                                                    WidthRequest="20" />
-                                                <ImageButton
-                                                    Command="{Binding Source={x:Reference RootPage}, Path=BindingContext.TranscribeCommand}"
-                                                    CommandParameter="{Binding .}"
-                                                    Source="transcribe_icon.png"
-                                                    WidthRequest="20" />
-                                                <ImageButton
-                                                    Command="{Binding Source={x:Reference RootPage}, Path=BindingContext.SummarizeCommand}"
-                                                    CommandParameter="{Binding .}"
-                                                    Source="summary_icon.png"
-                                                    WidthRequest="20" />
+                                    <Border StrokeShape="RoundRectangle 4" StrokeThickness="0.2" Margin="5">
+                                        <Grid Margin="2" ColumnDefinitions="Auto,*,Auto,Auto">
+                                            <HorizontalStackLayout Spacing="8">
+                                                <Image
+                                                    Background="Transparent"
+                                                    HeightRequest="16"
+                                                    Source="audio_icon.png"
+                                                    WidthRequest="16" />
+                                                <VerticalStackLayout VerticalOptions="Center">
+
+                                                    <Label
+                                                        FontAttributes="Bold"
+                                                        FontSize="12"
+                                                        Text="{Binding FileName}" />
+                                                    <Label
+                                                        FontSize="10"
+                                                        HorizontalOptions="Center"
+                                                        Text="{Binding Date, StringFormat='dd/MM/yyyy'}"
+                                                        TextColor="#888888" />
+                                                </VerticalStackLayout>
                                             </HorizontalStackLayout>
-                                        </VerticalStackLayout>
+                                            <ImageButton
+                                                Grid.Column="1"
+                                                BackgroundColor="Transparent"
+                                                Command="{Binding Source={x:Reference RootPage}, Path=BindingContext.DownloadFileCommand}"
+                                                CommandParameter="{Binding .}"
+                                                Source="download_icon.png" />
+                                            <ImageButton
+                                                Grid.Column="2"
+                                                BackgroundColor="Transparent"
+                                                Command="{Binding Source={x:Reference RootPage}, Path=BindingContext.DeleteFileCommand}"
+                                                CommandParameter="{Binding .}"
+                                                Source="trash_icon.png" />
+                                            <ImageButton
+                                                Grid.Column="3"
+                                                BackgroundColor="Transparent"
+                                                HeightRequest="24"
+                                                Source="more_vert_icon.png"
+                                                WidthRequest="24">
+
+                                                <!--  ATTACHED PROPERTY sur FlyoutBase, pas sur ImageButton directement  -->
+                                                <FlyoutBase.ContextFlyout>
+                                                    <MenuFlyout>
+                                                        <MenuFlyoutItem
+                                                            Command="{Binding Source={x:Reference RootPage}, Path=BindingContext.TranscribeFileCommand}"
+                                                            CommandParameter="{Binding .}"
+                                                            Text="Transcription" />
+                                                        <MenuFlyoutItem
+                                                            Command="{Binding Source={x:Reference RootPage}, Path=BindingContext.SummarizeFileCommand}"
+                                                            CommandParameter="{Binding .}"
+                                                            Text="Résumé" />
+                                                    </MenuFlyout>
+                                                </FlyoutBase.ContextFlyout>
+                                            </ImageButton>
+                                        </Grid>
                                     </Border>
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>
@@ -345,12 +372,16 @@
                     StrokeShape="RoundRectangle 12"
                     WidthRequest="300">
                     <VerticalStackLayout>
-                        <Label Style="{StaticResource CardTitleStyle}" Text="Transcriptions" />
+                        <Label
+                            Margin="0,0,0,10"
+                            Style="{StaticResource CardTitleStyle}"
+                            Text="Transcriptions" />
                         <CollectionView
                             ItemsSource="{Binding TranscriptFiles}"
                             SelectionChangedCommand="{Binding SelectFileCommand}"
                             SelectionChangedCommandParameter="{Binding SelectedItem, Mode=OneWay}"
                             SelectionMode="Single">
+                            
                             <CollectionView.EmptyView>
                                 <VerticalStackLayout
                                     Padding="16"
@@ -358,7 +389,7 @@
                                     Spacing="8">
                                     <Image
                                         HeightRequest="48"
-                                        Source="empty_transcript.png"
+                                        Source="empty_set.png"
                                         WidthRequest="48" />
                                     <Label
                                         FontAttributes="Bold"
@@ -372,28 +403,41 @@
                             </CollectionView.EmptyView>
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
-                                    <Border
-                                        Margin="0,4"
-                                        Padding="8"
-                                        StrokeShape="RoundRectangle 12">
-                                        <VerticalStackLayout Spacing="6">
-                                            <Label
-                                                FontAttributes="Bold"
-                                                FontSize="13"
-                                                Text="{Binding FileName}" />
-                                            <HorizontalStackLayout Spacing="12">
-                                                <ImageButton
-                                                    Command="{Binding Source={x:Reference RootPage}, Path=BindingContext.DownloadFileCommand}"
-                                                    CommandParameter="{Binding .}"
-                                                    Source="download_icon.png"
-                                                    WidthRequest="20" />
-                                                <ImageButton
-                                                    Command="{Binding Source={x:Reference RootPage}, Path=BindingContext.DeleteFileCommand}"
-                                                    CommandParameter="{Binding .}"
-                                                    Source="trash_icon.png"
-                                                    WidthRequest="20" />
+                                    <Border StrokeShape="RoundRectangle 4" StrokeThickness="0.2">
+                                        <Grid Margin="2" ColumnDefinitions="Auto,*,Auto,Auto">
+                                            <HorizontalStackLayout Spacing="8">
+                                                <Image
+                                                    Background="Transparent"
+                                                    HeightRequest="12"
+                                                    Source="doc_icon.png"
+                                                    WidthRequest="12" />
+                                                <VerticalStackLayout VerticalOptions="Center">
+                                                    <Label
+                                                        FontAttributes="Bold"
+                                                        FontSize="12"
+                                                        Text="{Binding FileName}" />
+                                                    <Label
+                                                        FontSize="10"
+                                                        HorizontalOptions="Center"
+                                                        Text="{Binding Date, StringFormat='dd/MM/yyyy'}"
+                                                        TextColor="#888888" />
+                                                </VerticalStackLayout>
                                             </HorizontalStackLayout>
-                                        </VerticalStackLayout>
+                                            <ImageButton
+                                                Grid.Column="1"
+                                                Background="Transparent"
+                                                Command="{Binding Source={x:Reference RootPage}, Path=BindingContext.DownloadFileCommand}"
+                                                CommandParameter="{Binding .}"
+                                                Source="download_icon.png"
+                                                WidthRequest="20" />
+                                            <ImageButton
+                                                Grid.Column="2"
+                                                Background="Transparent"
+                                                Command="{Binding Source={x:Reference RootPage}, Path=BindingContext.DeleteFileCommand}"
+                                                CommandParameter="{Binding .}"
+                                                Source="trash_icon.png"
+                                                WidthRequest="20" />
+                                        </Grid>
                                     </Border>
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>
@@ -407,7 +451,10 @@
                     StrokeShape="RoundRectangle 12"
                     WidthRequest="300">
                     <VerticalStackLayout>
-                        <Label Style="{StaticResource CardTitleStyle}" Text="Résumés" />
+                        <Label
+                            Margin="0,0,0,10"
+                            Style="{StaticResource CardTitleStyle}"
+                            Text="Résumés" />
                         <CollectionView
                             ItemsSource="{Binding SummaryFiles}"
                             SelectionChangedCommand="{Binding SelectFileCommand}"
@@ -420,11 +467,11 @@
                                     Spacing="8">
                                     <Image
                                         HeightRequest="48"
-                                        Source="empty_summary.png"
+                                        Source="empty_set.png"
                                         WidthRequest="48" />
                                     <Label
                                         FontAttributes="Bold"
-                                        FontSize="14"
+                                        FontSize="12"
                                         Text="Aucun résumé" />
                                     <Label
                                         FontSize="13"
@@ -434,28 +481,40 @@
                             </CollectionView.EmptyView>
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
-                                    <Border
-                                        Margin="0,4"
-                                        Padding="8"
-                                        StrokeShape="RoundRectangle 12">
-                                        <VerticalStackLayout Spacing="6">
-                                            <Label
-                                                FontAttributes="Bold"
-                                                FontSize="13"
-                                                Text="{Binding FileName}" />
-                                            <HorizontalStackLayout Spacing="12">
-                                                <ImageButton
-                                                    Command="{Binding Source={x:Reference RootPage}, Path=BindingContext.DownloadFileCommand}"
-                                                    CommandParameter="{Binding .}"
-                                                    Source="download_icon.png"
-                                                    WidthRequest="20" />
-                                                <ImageButton
-                                                    Command="{Binding Source={x:Reference RootPage}, Path=BindingContext.DeleteFileCommand}"
-                                                    CommandParameter="{Binding .}"
-                                                    Source="trash_icon.png"
-                                                    WidthRequest="20" />
+                                    <Border StrokeShape="RoundRectangle 4" StrokeThickness="0.2">
+                                        <Grid Margin="2" ColumnDefinitions="Auto,*,Auto">
+                                            <HorizontalStackLayout Spacing="8">
+                                                <Image
+                                                    Background="Transparent"
+                                                    HeightRequest="12"
+                                                    Source="doc_icon.png"
+                                                    WidthRequest="12" />
+
+                                                <VerticalStackLayout VerticalOptions="Center">
+                                                    <Label
+                                                        FontAttributes="Bold"
+                                                        FontSize="12"
+                                                        Text="{Binding FileName}" />
+                                                    <Label
+                                                        FontSize="10"
+                                                        HorizontalOptions="Center"
+                                                        Text="{Binding Date, StringFormat='dd/MM/yyyy'}"
+                                                        TextColor="#888888" />
+                                                </VerticalStackLayout>
                                             </HorizontalStackLayout>
-                                        </VerticalStackLayout>
+                                            <ImageButton Grid.Column="1"
+                                                Background="Transparent"
+                                                Command="{Binding Source={x:Reference RootPage}, Path=BindingContext.DownloadFileCommand}"
+                                                CommandParameter="{Binding .}"
+                                                Source="download_icon.png"
+                                                WidthRequest="20" />
+                                            <ImageButton Grid.Column="2"
+                                                Background="Transparent"
+                                                Command="{Binding Source={x:Reference RootPage}, Path=BindingContext.DeleteFileCommand}"
+                                                CommandParameter="{Binding .}"
+                                                Source="trash_icon.png"
+                                                WidthRequest="20" />
+                                        </Grid>
                                     </Border>
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>
@@ -464,7 +523,7 @@
                 </Border>
             </HorizontalStackLayout>
 
-           
+
             <!--  Footer  -->
             <Label
                 Margin="0,32,0,0"

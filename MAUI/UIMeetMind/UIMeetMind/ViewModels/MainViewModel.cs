@@ -101,13 +101,11 @@ public partial class MainViewModel : ObservableObject
     {
         try
         {
-            //if (IsBusy) return;
-            //IsBusy = true;
-            HasRecordingInProgress = true;
+            //HasRecordingInProgress = true;
             if (IsBusy) return;
             IsBusy = true;
-           // await _apiService.StartRecordingAsync();
-           // await LoadMeetingsAsync();
+            await _apiService.StartRecordingAsync();
+            await LoadMeetingsAsync();
             await PlaySoundAsync("start_recording.wav");
             await ShowToastAsync("Enregistrement démarré");
             LoggerConfig.Logger.Information("Enregistrement démarré");
@@ -131,13 +129,12 @@ public partial class MainViewModel : ObservableObject
         {
             if (IsBusy) return;
             IsBusy = true;
-            HasRecordingInProgress = false;
             var toStop = Meetings.FirstOrDefault(m => m.Status == "In Progress")?.MeetingId;
             if (!string.IsNullOrEmpty(toStop))
             {
                 await _apiService.StopRecordingAsync(toStop);
                 await LoadMeetingsAsync();
-                HasRecordingInProgress = true;
+                HasRecordingInProgress = false;
                 await PlaySoundAsync("stop_recording.wav");
                 await ShowToastAsync("Enregistrement arrêté");
                 LoggerConfig.Logger.Information("Enregistrement arrêté");
@@ -262,6 +259,49 @@ public partial class MainViewModel : ObservableObject
     {
         SelectedFile = file;
     }
+
+    [RelayCommand]
+    private async Task TranscribeFileAsync(MeetingFile file)
+    {
+        if (file == null) return;
+        IsBusy = true;
+        try
+        {
+            var id = ExtractMeetingId(file.FileName);
+            await _apiService.TranscribeMeetingAsync(id);
+            await LoadMeetingsAsync();
+            await ShowToastAsync("Transcription lancée pour " + id);
+            LoggerConfig.Logger.Information("Transcription lancée pour {Id}", id);
+        }
+        catch (Exception ex)
+        {
+            LoggerConfig.Logger.Error(ex, "Erreur lors de la transcription de {Path}", file.FilePath);
+            await ShowToastAsync("Échec de la transcription", true);
+        }
+        finally { IsBusy = false; }
+    }
+
+    [RelayCommand]
+    private async Task SummarizeFileAsync(MeetingFile file)
+    {
+        if (file == null) return;
+        IsBusy = true;
+        try
+        {
+            var id = ExtractMeetingId(file.FileName);
+            await _apiService.SummarizeMeetingAsync(id);
+            await LoadMeetingsAsync();
+            await ShowToastAsync("Résumé généré pour " + id);
+            LoggerConfig.Logger.Information("Résumé généré pour {Id}", id);
+        }
+        catch (Exception ex)
+        {
+            LoggerConfig.Logger.Error(ex, "Erreur lors du résumé de {Path}", file.FilePath);
+            await ShowToastAsync("Échec du résumé", true);
+        }
+        finally { IsBusy = false; }
+    }
+
 
     public async Task LoadAllFilesAsync()
     {
