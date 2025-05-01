@@ -6,6 +6,7 @@ BASE_DIR = Path(__file__).resolve().parent
 STORAGE_DIR = BASE_DIR / "storage"
 FILES_DIR = STORAGE_DIR / "files"
 LOGS_DIR = BASE_DIR / "logs"
+CALENDAR_DIR = STORAGE_DIR / "calendar"
 
 # Création auto des dossiers s'ils n'existent pas
 for directory in [STORAGE_DIR, FILES_DIR, LOGS_DIR]:
