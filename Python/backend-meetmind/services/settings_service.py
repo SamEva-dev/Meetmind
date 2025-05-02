@@ -7,12 +7,12 @@ from pathlib import Path
 SETTINGS_FILE = STORAGE_DIR / "settings.json"
 
 DEFAULT_SETTINGS = {
-    "auto_transcribe": True,
-    "auto_summarize": True,
-    "auto_start_enabled": True,
-    "auto_stop_enabled": True,
-    "pre_notify_delay": 10,  # minutes
-    "repeat_notify_delay": 1  # minutes
+    "autoTranscribe": True,
+    "autoSummarize": True,
+    "autoStartEnabled": True,
+    "autoStopEnabled": True,
+    "preNotifyDelay": 10,  # minutes
+    "repeatNotifyDelay": 1  # minutes
 }
 
 def load_settings():

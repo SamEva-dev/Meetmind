@@ -13,6 +13,8 @@ def load_meetings() -> List[Meeting]:
     try:
         with open(MEETINGS_FILE, "r", encoding="utf-8") as f:
             data = json.load(f)
+            if not data:
+                return []
             return [Meeting(**item) for item in data]
     except FileNotFoundError:
         return []
@@ -23,11 +25,14 @@ def load_meetings() -> List[Meeting]:
 
 def save_meetings(meetings: List[Meeting]):
     try:
+        if not isinstance(meetings, list):
+            raise ValueError("save_meetings() attend une liste de Meeting")
         with open(MEETINGS_FILE, "w", encoding="utf-8") as f:
             f.write("[\n" + ",\n".join(m.model_dump_json(indent=2) for m in meetings) + "\n]")
         logger.info(f"Reunions sauvegardees dans {MEETINGS_FILE}")  
     except Exception as e:
         logger.error(f"Erreur de sauvegarde des reunions: {e}")
+
 
 
 def create_meeting(title: str, calendar_event_id: Optional[str] = None) -> Meeting:

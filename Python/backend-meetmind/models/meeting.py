@@ -4,9 +4,9 @@ from pydantic import BaseModel
 from datetime import datetime
 
 class MeetingStatus(str, Enum):
-    UPCOMING = "A venir"
-    IN_PROGRESS = "En cours"
-    COMPLETED = "Termine"
+    UPCOMING = "UPCOMING"
+    IN_PROGRESS = "IN_PROGRESS"
+    COMPLETED = "COMPLETED"
 
 class MeetingFile(BaseModel):
     file_name: str
@@ -22,3 +22,6 @@ class Meeting(BaseModel):
     end_timestamp: Optional[datetime] = None
     status: MeetingStatus = MeetingStatus.UPCOMING
     files: List[MeetingFile] = []
+    audio_file: Optional[str] = None
+    transcript_file: Optional[str] = None
+    summary_file: Optional[str] = None

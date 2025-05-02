@@ -13,7 +13,12 @@ def get_notifications():
     if notif_path.exists():
         with open(notif_path, "r", encoding="utf-8") as f:
             try:
-                return json.load(f)
+                print("Loading notifications from file...")
+                data = json.load(f)
+                print(data)
+                if not isinstance(data, list):
+                    raise ValueError("Invalid data format in notifications file.")
+                return data
             except json.JSONDecodeError:
                 return []
     return []

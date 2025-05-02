@@ -13,6 +13,7 @@ from models.meeting import MeetingFile, MeetingStatus
 from utils.file_utils import get_audio_filepath, get_transcript_filepath, get_summary_filepath
 from utils.logger_config import logger
 from datetime import datetime
+import pytz
 import os
 
 router = APIRouter()
@@ -26,12 +27,11 @@ def start_record(title: str):
 @router.post("/stop_record")
 def stop_record(meeting_id: str):
     stop_recording()
-    update_meeting_status(meeting_id, MeetingStatus.COMPLETED, datetime.utcnow())
+    update_meeting_status(meeting_id, MeetingStatus.COMPLETED, datetime.now(pytz.utc))
 
     settings = load_settings()
-    auto_transcribe = settings.get("auto_transcribe", True)
-    auto_summarize = settings.get("auto_summarize", True)
-
+    auto_transcribe = settings.get("autoTranscribe", True)
+    auto_summarize = settings.get("autoSummarize", True)
     result = {"message": "Recording stopped."}
 
     if auto_transcribe:
@@ -41,7 +41,7 @@ def stop_record(meeting_id: str):
             file_name=os.path.basename(transcript_path),
             file_path=str(transcript_path),
             type="transcript",
-            date=datetime.utcnow()
+            date=datetime.now(pytz.utc)
         )
         add_meeting_file(meeting_id, file)
         result["transcript_path"] = transcript_path
@@ -52,7 +52,7 @@ def stop_record(meeting_id: str):
                 file_name=os.path.basename(summary_path),
                 file_path=str(summary_path),
                 type="summary",
-                date=datetime.utcnow()
+                date=datetime.now(pytz.utc)
             )
             add_meeting_file(meeting_id, file)
             result["summary_path"] = summary_path
@@ -66,7 +66,7 @@ def stop_all_meetings():
     for m in meetings:
         if m.status == MeetingStatus.IN_PROGRESS:
             stop_recording()
-            update_meeting_status(m.meeting_id, MeetingStatus.COMPLETED, datetime.utcnow())
+            update_meeting_status(m.meeting_id, MeetingStatus.COMPLETED, datetime.now(pytz.utc))
             stopped.append(m.meeting_id)
     return {"message": "Reunions en cours arrete", "meetings": stopped}
 
@@ -78,7 +78,7 @@ def transcribe(meeting_id: str):
         file_name=os.path.basename(transcript_path),
         file_path=str(transcript_path),
         type="transcript",
-        date=datetime.utcnow()
+        date=datetime.now(pytz.utc)
     )
     add_meeting_file(meeting_id, file)
     return {"transcript_path": transcript_path}
@@ -91,7 +91,7 @@ def summarize(meeting_id: str):
         file_name=os.path.basename(summary_path),
         file_path=str(summary_path),
         type="summary",
-        date=datetime.utcnow()
+        date=datetime.now(pytz.utc)
     )
     add_meeting_file(meeting_id, file)
     return {"summary_path": summary_path}
