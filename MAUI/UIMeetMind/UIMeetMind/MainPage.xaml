@@ -18,6 +18,7 @@
     <ScrollView>
         <VerticalStackLayout Padding="24" Spacing="24">
 
+
             <!--  Header  -->
             <Grid
                 Padding="0,12"
@@ -54,10 +55,62 @@
                         Text="Version 1.0"
                         TextColor="#98A2B3"
                         VerticalOptions="Center" />
+                    <Label
+                        FontAttributes="Italic"
+                        FontSize="12"
+                        Text="{Binding ConnectionState}"
+                        TextColor="Gray" />
                 </VerticalStackLayout>
                 <!--  Recording icon  -->
 
             </Grid>
+
+            <!--  Notifications section  -->
+            <Button
+                Margin="0,0,0,8"
+                Padding="10,5"
+                BackgroundColor="#EF4444"
+                Command="{Binding ClearAllNotificationsCommand}"
+                CornerRadius="8"
+                FontSize="13"
+                HorizontalOptions="End"
+                Text="Effacer toutes les notifications"
+                TextColor="White" />
+
+            <CollectionView Margin="0,10,0,0" ItemsSource="{Binding Notifications}" VerticalScrollBarVisibility="Default">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border
+                            Margin="0,4"
+                            BackgroundColor="{Binding Type, Converter={StaticResource TypeToBackgroundConverter}}"
+                            Stroke="{Binding Type, Converter={StaticResource TypeToBorderConverter}}"
+                            StrokeShape="RoundRectangle 8"
+                            StrokeThickness="1">
+                            <HorizontalStackLayout
+                                Padding="10"
+                                HorizontalOptions="FillAndExpand"
+                                Spacing="10">
+                                <Image
+                                    HeightRequest="20"
+                                    Source="{Binding Type, Converter={StaticResource TypeToIconConverter}}"
+                                    WidthRequest="20" />
+                                <Label
+                                    FontSize="13"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="{Binding Message}"
+                                    TextColor="#1F2937" />
+                                <ImageButton
+                                    BackgroundColor="Transparent"
+                                    Command="{Binding Source={x:Reference RootPage}, Path=BindingContext.RemoveNotificationCommand}"
+                                    CommandParameter="{Binding .}"
+                                    HeightRequest="20"
+                                    Source="trash_icon.png"
+                                    WidthRequest="20" />
+                            </HorizontalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
 
             <!--  Status Control  -->
             <!--  Status Card  -->
@@ -170,7 +223,8 @@
                             <CollectionView
                                 Grid.Row="1"
                                 ItemsSource="{Binding Meetings}"
-                                SelectionMode="None">
+                                SelectionMode="None"
+                                VerticalScrollBarVisibility="Default">
                                 <CollectionView.EmptyView>
                                     <VerticalStackLayout Padding="24" HorizontalOptions="Center">
                                         <Label
@@ -269,7 +323,6 @@
                 <!--  Fichiers Audio  -->
                 <Border
                     Padding="16"
-                    
                     StrokeShape="RoundRectangle 12"
                     WidthRequest="300">
                     <VerticalStackLayout>
@@ -282,7 +335,8 @@
                             ItemsSource="{Binding AudioFiles}"
                             SelectionChangedCommand="{Binding SelectFileCommand}"
                             SelectionChangedCommandParameter="{Binding SelectedItem, Mode=OneWay}"
-                            SelectionMode="Single">
+                            SelectionMode="Single"
+                            VerticalScrollBarVisibility="Always">
                             <CollectionView.EmptyView>
                                 <VerticalStackLayout
                                     Padding="16"
@@ -304,7 +358,10 @@
                             </CollectionView.EmptyView>
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
-                                    <Border StrokeShape="RoundRectangle 4" StrokeThickness="0.2" Margin="5">
+                                    <Border
+                                        Margin="5"
+                                        StrokeShape="RoundRectangle 4"
+                                        StrokeThickness="0.2">
                                         <Grid Margin="2" ColumnDefinitions="Auto,*,Auto,Auto">
                                             <HorizontalStackLayout Spacing="8">
                                                 <Image
@@ -317,7 +374,7 @@
                                                     <Label
                                                         FontAttributes="Bold"
                                                         FontSize="12"
-                                                        Text="{Binding FileName}" />
+                                                        Text="{Binding Title}" />
                                                     <Label
                                                         FontSize="10"
                                                         HorizontalOptions="Center"
@@ -381,7 +438,7 @@
                             SelectionChangedCommand="{Binding SelectFileCommand}"
                             SelectionChangedCommandParameter="{Binding SelectedItem, Mode=OneWay}"
                             SelectionMode="Single">
-                            
+
                             <CollectionView.EmptyView>
                                 <VerticalStackLayout
                                     Padding="16"
@@ -415,7 +472,7 @@
                                                     <Label
                                                         FontAttributes="Bold"
                                                         FontSize="12"
-                                                        Text="{Binding FileName}" />
+                                                        Text="{Binding Title}" />
                                                     <Label
                                                         FontSize="10"
                                                         HorizontalOptions="Center"
@@ -494,7 +551,7 @@
                                                     <Label
                                                         FontAttributes="Bold"
                                                         FontSize="12"
-                                                        Text="{Binding FileName}" />
+                                                        Text="{Binding Title}" />
                                                     <Label
                                                         FontSize="10"
                                                         HorizontalOptions="Center"
@@ -502,13 +559,15 @@
                                                         TextColor="#888888" />
                                                 </VerticalStackLayout>
                                             </HorizontalStackLayout>
-                                            <ImageButton Grid.Column="1"
+                                            <ImageButton
+                                                Grid.Column="1"
                                                 Background="Transparent"
                                                 Command="{Binding Source={x:Reference RootPage}, Path=BindingContext.DownloadFileCommand}"
                                                 CommandParameter="{Binding .}"
                                                 Source="download_icon.png"
                                                 WidthRequest="20" />
-                                            <ImageButton Grid.Column="2"
+                                            <ImageButton
+                                                Grid.Column="2"
                                                 Background="Transparent"
                                                 Command="{Binding Source={x:Reference RootPage}, Path=BindingContext.DeleteFileCommand}"
                                                 CommandParameter="{Binding .}"

@@ -6,10 +6,7 @@ using CommunityToolkit.Mvvm.Input;
 using UIMeetMind.Models;
 using UIMeetMind.Services;
 using UIMeetMind.Utils;
-using Microsoft.Maui.Media;
 using Plugin.Maui.Audio;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-using Microsoft.Maui.Storage;
 
 namespace UIMeetMind.ViewModels;
 
@@ -17,6 +14,18 @@ public partial class MainViewModel : ObservableObject
 {
     private readonly ApiService _apiService;
     private readonly IAudioManager _audioManager;
+
+    private readonly IHealthService _healthService;
+    private readonly INotificationService _notificationService;
+    private readonly Timer _heartbeatTimer;
+
+    private readonly IMeetingService _meetingService;
+    private readonly IFileService _fileService;
+
+    [ObservableProperty] private string connectionState = "Connecting...";
+    [ObservableProperty] private ObservableCollection<NotificationModel> _notifications = new();
+
+    private CancellationTokenSource _cts;
 
     public ObservableCollection<MeetingModel> Meetings { get; } = new();
     public ObservableCollection<MeetingFile> AudioFiles { get; } = new();
@@ -46,30 +55,83 @@ public partial class MainViewModel : ObservableObject
     private string _endTimestamp;
 
 
-    public MainViewModel(ApiService apiService, IAudioManager audioManager)
+    public MainViewModel(ApiService apiService, 
+        IAudioManager audioManager, 
+        IHealthService healthService, 
+        INotificationService notificationService, 
+        IMeetingService meetingService,
+    IFileService fileService)
     {
         _apiService = apiService;
         _audioManager = audioManager;
-        LoadMeetingsAsync();
 
-        AudioFiles = new ObservableCollection<MeetingFile>
+        _meetingService = meetingService;
+        _fileService = fileService;
+
+        _healthService = healthService;
+        _notificationService = notificationService;
+
+        _cts = new CancellationTokenSource();
+
+        StartHeartbeat(_cts.Token);
+
+        //LoadMeetingsAsync();
+
+        //AudioFiles = new ObservableCollection<MeetingFile>
+        //{
+        //    new MeetingFile(){FileName="Meeting-001.wav", Date=new DateTime(2025,4,28)},
+        //    new MeetingFile(){FileName="Meeting-002.wav", Date=new DateTime(2025,4,28)},
+        //    new MeetingFile(){FileName="Meeting-003.wav", Date=new DateTime(2025,4,28)},
+        //};
+
+        //TranscriptFiles = new ObservableCollection<MeetingFile>
+        //{
+        //    new MeetingFile(){FileName="Meeting-001_transcript.txt", Date=new DateTime(2025,4,27) },
+
+        //    new MeetingFile() { FileName = "Meeting-002_transcript.txt", Date = new DateTime(2025, 4, 28) },
+        //};
+
+        //SummaryFiles = new ObservableCollection<MeetingFile>
+        //{
+        //    new MeetingFile() { FileName =  "Meeting-001_summary.txt", Date = new DateTime(2025, 4, 27) },
+        //};
+    }
+
+    private async void StartHeartbeat(CancellationToken token)
+    {
+        var timer = new PeriodicTimer(TimeSpan.FromSeconds(30));
+
+        while (await timer.WaitForNextTickAsync(token))
         {
-            new MeetingFile(){FileName="Meeting-001.wav", Date=new DateTime(2025,4,28)},
-            new MeetingFile(){FileName="Meeting-002.wav", Date=new DateTime(2025,4,28)},
-            new MeetingFile(){FileName="Meeting-003.wav", Date=new DateTime(2025,4,28)},
-        };
+            try
+            {
+                var ok = await _healthService.CheckHealthAsync();
+                ConnectionState = ok ? "Connecté" : "Déconnecté";
 
-        TranscriptFiles = new ObservableCollection<MeetingFile>
-        {
-            new MeetingFile(){FileName="Meeting-001_transcript.txt", Date=new DateTime(2025,4,27) },
+                if (ok)
+                {
+                    var newNotifications = await _notificationService.GetNotificationsAsync();
+                    foreach (var notif in newNotifications)
+                    {
+                        if (!Notifications.Any(n => n.Message == notif.Message && n.Type == notif.Type))
+                            Notifications.Add(notif);
+                    }
+                    await _notificationService.ClearNotificationsAsync();
 
-            new MeetingFile() { FileName = "Meeting-002_transcript.txt", Date = new DateTime(2025, 4, 28) },
-        };
-
-        SummaryFiles = new ObservableCollection<MeetingFile>
-        {
-            new MeetingFile() { FileName =  "Meeting-001_summary.txt", Date = new DateTime(2025, 4, 27) },
-        };
+                    await RefreshAllDataAsync();
+                }
+                else
+                {
+                    await ShowToastAsync("Serveur injoignable");
+                }
+            }
+            catch (Exception ex)
+            {
+                LoggerConfig.Logger.Error(ex, "Erreur lors de la connection au server", ex.Message);
+                ConnectionState = "Déconnecté";
+                await ShowToastAsync("Erreur de connexion au serveur");
+            }
+        }
     }
 
     [RelayCommand]
@@ -302,6 +364,62 @@ public partial class MainViewModel : ObservableObject
         finally { IsBusy = false; }
     }
 
+    [RelayCommand]
+    public void RemoveNotification(NotificationModel notification)
+    {
+        if (Notifications.Contains(notification))
+            Notifications.Remove(notification);
+    }
+
+    [RelayCommand]
+    public void ClearAllNotifications()
+    {
+        Notifications.Clear();
+    }
+
+    [RelayCommand]
+    public async Task RefreshAllDataAsync()
+    {
+        if (IsBusy)
+            return;
+
+        IsBusy = true;
+        try
+        {
+            // 1) Réunions du jour
+            var today = await _meetingService.GetTodayMeetingsAsync();
+            Meetings.Clear();
+            foreach (var m in today)
+                Meetings.Add(m);
+
+            // 2) Fichiers audio
+            var audios = await _fileService.GetAudioFilesAsync();
+            AudioFiles.Clear();
+            foreach (var f in audios)
+                AudioFiles.Add(f);
+
+            // 3) Transcriptions
+            var transcripts = await _fileService.GetTranscriptFilesAsync();
+            TranscriptFiles.Clear();
+            foreach (var f in transcripts)
+                TranscriptFiles.Add(f);
+
+            // 4) Résumés
+            var summaries = await _fileService.GetSummaryFilesAsync();
+            SummaryFiles.Clear();
+            foreach (var f in summaries)
+                SummaryFiles.Add(f);
+        }
+        catch (Exception ex)
+        {
+            // Affiche une alerte en cas de problème
+            await Shell.Current.DisplayAlert("Erreur", $"Impossible de rafraîchir : {ex.Message}", "OK");
+        }
+        finally
+        {
+            IsBusy = false;
+        }
+    }
 
     public async Task LoadAllFilesAsync()
     {

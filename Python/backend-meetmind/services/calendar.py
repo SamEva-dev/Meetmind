@@ -37,6 +37,8 @@ def get_today_events():
         now = datetime.datetime.utcnow()
         end_of_day = now.replace(hour=23, minute=59, second=59)
 
+        print(f"Recherche des reunions entre {now} et {end_of_day}")
+
         events_result = service.events().list(
             calendarId='primary',
             timeMin=now.isoformat() + 'Z',

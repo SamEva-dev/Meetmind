@@ -126,7 +126,6 @@ async def auto_start_loop():
             google_events = get_today_events()
 
             import_google_events_to_meetings(google_events, meetings)
-            print(f"google_events: {google_events}")
             for event in google_events:
                 event_id = event.get("id")
                 title = event.get("summary", "(Sans titre)")

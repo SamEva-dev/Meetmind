@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="UIMeetMind.Views.SettingsPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="SettingsPage"
+    BackgroundColor="White">
+
+    <Grid>
+        <!-- Main content -->
+        <ScrollView InputTransparent="{Binding IsBusy}">
+            <VerticalStackLayout Padding="24" Spacing="24">
+
+                <!-- Title -->
+                <Label Text="Paramètres" FontSize="24" FontAttributes="Bold" TextColor="#1A1A1A" />
+
+                <!-- Section Automation -->
+                <Label Text="Automatisation" FontSize="18" FontAttributes="Bold" TextColor="#333" />
+
+                <!-- AutoTranscribe -->
+                <Grid ColumnDefinitions="*,Auto" Padding="0,8" IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBooleanConverter}}">
+                    <VerticalStackLayout>
+                        <Label Text="Transcrire automatiquement" FontAttributes="Bold" />
+                        <Label Text="Activer la transcription automatique après l'enregistrement." FontSize="12" TextColor="#666" />
+                    </VerticalStackLayout>
+                    <Switch IsToggled="{Binding AutoTranscribe}" Grid.Column="1" />
+                </Grid>
+
+                <!-- AutoSummarize -->
+                <Grid ColumnDefinitions="*,Auto" Padding="0,8" IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBooleanConverter}}">
+                    <VerticalStackLayout>
+                        <Label Text="Résumer automatiquement" FontAttributes="Bold" />
+                        <Label Text="Générer un résumé après chaque transcription." FontSize="12" TextColor="#666" />
+                    </VerticalStackLayout>
+                    <Switch IsToggled="{Binding AutoSummarize}" Grid.Column="1" />
+                </Grid>
+
+                <!-- AutoStart -->
+                <Grid ColumnDefinitions="*,Auto" Padding="0,8" IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBooleanConverter}}">
+                    <VerticalStackLayout>
+                        <Label Text="Démarrer automatiquement" FontAttributes="Bold" />
+                        <Label Text="Lancer les réunions planifiées automatiquement." FontSize="12" TextColor="#666" />
+                    </VerticalStackLayout>
+                    <Switch IsToggled="{Binding AutoStartEnabled}" Grid.Column="1" />
+                </Grid>
+
+                <!-- AutoStop -->
+                <Grid ColumnDefinitions="*,Auto" Padding="0,8" IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBooleanConverter}}">
+                    <VerticalStackLayout>
+                        <Label Text="Arrêt automatique" FontAttributes="Bold" />
+                        <Label Text="Arrêter l'enregistrement à la fin prévue de la réunion." FontSize="12" TextColor="#666" />
+                    </VerticalStackLayout>
+                    <Switch IsToggled="{Binding AutoStopEnabled}" Grid.Column="1" />
+                </Grid>
+
+                <!-- Section Notifications -->
+                <Label Text="Notifications" FontSize="18" FontAttributes="Bold" TextColor="#333" Margin="0,24,0,0" />
+
+                <!-- PreNotifyDelay -->
+                <VerticalStackLayout Spacing="4" IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBooleanConverter}}">
+                    <Label Text="Notifier X minutes avant la réunion" FontAttributes="Bold" />
+                    <Label Text="Définit le délai d’alerte avant le début d’une réunion." FontSize="12" TextColor="#666" />
+                    <Grid ColumnDefinitions="*,Auto" VerticalOptions="Center">
+                        <Slider
+                            x:Name="PreNotifySlider"
+                            Minimum="0"
+                            Maximum="60"
+                            Value="{Binding PreNotifyDelay, Mode=TwoWay}" />
+                        <Label Grid.Column="1"
+                               Text="{Binding PreNotifyDelay}"
+                               FontSize="14"
+                               FontAttributes="Bold"
+                               Margin="10,0,0,0" />
+                    </Grid>
+                </VerticalStackLayout>
+
+                <!-- RepeatNotifyDelay -->
+                <VerticalStackLayout Spacing="4" IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBooleanConverter}}">
+                    <Label Text="Répéter toutes les X minutes" FontAttributes="Bold" />
+                    <Label Text="Si aucune action n’est faite, répéter l’alerte à ce rythme." FontSize="12" TextColor="#666" />
+                    <Grid ColumnDefinitions="*,Auto" VerticalOptions="Center">
+                        <Slider
+                            Minimum="1"
+                            Maximum="15"
+                            Value="{Binding RepeatNotifyDelay, Mode=TwoWay}" />
+                        <Label Grid.Column="1"
+                               Text="{Binding RepeatNotifyDelay}"
+                               FontSize="14"
+                               FontAttributes="Bold"
+                               Margin="10,0,0,0" />
+                    </Grid>
+                </VerticalStackLayout>
+
+                <!-- Bouton Enregistrer -->
+                <Button
+                    Text="Enregistrer les paramètres"
+                    Command="{Binding SaveSettingsCommand}"
+                    BackgroundColor="#1A73E8"
+                    TextColor="White"
+                    CornerRadius="8"
+                    FontAttributes="Bold"
+                    Margin="0,24,0,0"
+                    HeightRequest="48"
+                    IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBooleanConverter}}" />
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- Overlay d'indicateur de chargement -->
+        <BoxView
+            Color="Black"
+            Opacity="0.4"
+            IsVisible="{Binding IsBusy}" />
+        <ActivityIndicator
+            IsRunning="{Binding IsBusy}"
+            IsVisible="{Binding IsBusy}"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Color="#7F56D9" />
+    </Grid>
+</ContentPage>

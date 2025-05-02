@@ -9,6 +9,7 @@ from routes.notification_routes import router as notification_router
 from routes.settings_routes import router as settings_router
 from services.meeting_auto_starter import auto_start_loop
 from routes.health_routes import router as health_router
+from routes.file_routes import router as file_router
 from utils.logger_config import logger
 
 app = FastAPI(
@@ -32,6 +33,7 @@ app.include_router(meeting_router)
 app.include_router(calendar_router)
 app.include_router(notification_router)
 app.include_router(settings_router)
+app.include_router(file_router)
 
 @app.on_event("startup")
 def startup_event():

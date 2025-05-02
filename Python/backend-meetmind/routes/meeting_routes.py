@@ -11,6 +11,7 @@ from managers.meeting_manager import (
 from services.settings_service import load_settings
 from models.meeting import MeetingFile, MeetingStatus
 from utils.file_utils import get_audio_filepath, get_transcript_filepath, get_summary_filepath
+from services.calendar import get_today_events
 from utils.logger_config import logger
 from datetime import datetime
 import pytz
@@ -61,6 +62,7 @@ def stop_record(meeting_id: str):
 
 @router.post("/meetings/stop_all")
 def stop_all_meetings():
+    print("Stopping all meetings...")
     meetings = load_meetings()
     stopped = []
     for m in meetings:
@@ -103,6 +105,13 @@ def get_all_meetings():
 @router.get("/meetings/{meeting_id}")
 def get_one_meeting(meeting_id: str):
     return get_meeting(meeting_id)
+
+@router.get("/meeting/today")
+def get_today_meetings():
+    meetings = load_meetings()
+    today = datetime.now(pytz.utc).date()
+    # Filtrer les réunions dont le début est aujourd'hui
+    return [m for m in meetings if m.start_timestamp and m.start_timestamp.date() == today]
 
 @router.delete("/meetings/{meeting_id}")
 def delete_one_meeting(meeting_id: str):

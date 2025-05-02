@@ -13,6 +13,10 @@
             <conv:InverseBooleanConverter x:Key="InverseBooleanConverter" />
             <conv:StatutToColorConverter  x:Key="StatutToColorConverter" />
             <conv:StatutToTextColorConverter  x:Key="StatutToTextColorConverter" />
+            <conv:StateToColorConverter  x:Key="StateToColorConverter" />
+            <conv:TypeToIconConverter  x:Key="TypeToIconConverter" />
+            <conv:TypeToBackgroundConverter  x:Key="TypeToBackgroundConverter" />
+            <conv:TypeToBorderConverter  x:Key="TypeToBorderConverter" />
         </ResourceDictionary>
     </Application.Resources>
     
