@@ -15,11 +15,13 @@ class MeetingFile(BaseModel):
     date: datetime
 
 class Meeting(BaseModel):
-    meeting_id: str
+    meetingId: str
     title: str
-    calendar_event_id: Optional[str] = None  # pour mapping futur
-    start_timestamp: datetime
-    end_timestamp: Optional[datetime] = None
+    calendar_event_id: Optional[str] = None
+    created: datetime = datetime.now()
+    startTimestamp: datetime
+    endTimestamp: Optional[datetime] = None
+    lastTimestamp: Optional[datetime] = None
     status: MeetingStatus = MeetingStatus.UPCOMING
     files: List[MeetingFile] = []
     audio_file: Optional[str] = None

@@ -2,6 +2,8 @@
 
 public class MeetingFile
 {
+    public string MeetingId { get; set; }
+
     /// <summary>
     /// Nom du fichier (ex: "recording_1234.wav")
     /// </summary>

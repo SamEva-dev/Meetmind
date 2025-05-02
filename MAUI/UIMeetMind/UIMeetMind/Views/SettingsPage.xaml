@@ -7,115 +7,160 @@
     BackgroundColor="White">
 
     <Grid>
-        <!-- Main content -->
+        <!--  Main content  -->
         <ScrollView InputTransparent="{Binding IsBusy}">
             <VerticalStackLayout Padding="24" Spacing="24">
 
-                <!-- Title -->
-                <Label Text="Paramètres" FontSize="24" FontAttributes="Bold" TextColor="#1A1A1A" />
+                <!--  Title  -->
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="24"
+                    Text="Paramètres"
+                    TextColor="#1A1A1A" />
 
-                <!-- Section Automation -->
-                <Label Text="Automatisation" FontSize="18" FontAttributes="Bold" TextColor="#333" />
+                <!--  Section Automation  -->
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    Text="Automatisation"
+                    TextColor="#333" />
 
-                <!-- AutoTranscribe -->
-                <Grid ColumnDefinitions="*,Auto" Padding="0,8" IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBooleanConverter}}">
+                <!--  AutoTranscribe  -->
+                <Grid
+                    Padding="0,8"
+                    ColumnDefinitions="*,Auto"
+                    IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBooleanConverter}}">
                     <VerticalStackLayout>
-                        <Label Text="Transcrire automatiquement" FontAttributes="Bold" />
-                        <Label Text="Activer la transcription automatique après l'enregistrement." FontSize="12" TextColor="#666" />
+                        <Label FontAttributes="Bold" Text="Transcrire automatiquement" />
+                        <Label
+                            FontSize="12"
+                            Text="Activer la transcription automatique après l'enregistrement."
+                            TextColor="#666" />
                     </VerticalStackLayout>
-                    <Switch IsToggled="{Binding AutoTranscribe}" Grid.Column="1" />
+                    <Switch Grid.Column="1" IsToggled="{Binding AutoTranscribe}" />
                 </Grid>
 
-                <!-- AutoSummarize -->
-                <Grid ColumnDefinitions="*,Auto" Padding="0,8" IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBooleanConverter}}">
+                <!--  AutoSummarize  -->
+                <Grid
+                    Padding="0,8"
+                    ColumnDefinitions="*,Auto"
+                    IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBooleanConverter}}">
                     <VerticalStackLayout>
-                        <Label Text="Résumer automatiquement" FontAttributes="Bold" />
-                        <Label Text="Générer un résumé après chaque transcription." FontSize="12" TextColor="#666" />
+                        <Label FontAttributes="Bold" Text="Résumer automatiquement" />
+                        <Label
+                            FontSize="12"
+                            Text="Générer un résumé après chaque transcription."
+                            TextColor="#666" />
                     </VerticalStackLayout>
-                    <Switch IsToggled="{Binding AutoSummarize}" Grid.Column="1" />
+                    <Switch Grid.Column="1" IsToggled="{Binding AutoSummarize}" />
                 </Grid>
 
-                <!-- AutoStart -->
-                <Grid ColumnDefinitions="*,Auto" Padding="0,8" IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBooleanConverter}}">
+                <!--  AutoStart  -->
+                <Grid
+                    Padding="0,8"
+                    ColumnDefinitions="*,Auto"
+                    IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBooleanConverter}}">
                     <VerticalStackLayout>
-                        <Label Text="Démarrer automatiquement" FontAttributes="Bold" />
-                        <Label Text="Lancer les réunions planifiées automatiquement." FontSize="12" TextColor="#666" />
+                        <Label FontAttributes="Bold" Text="Démarrer automatiquement" />
+                        <Label
+                            FontSize="12"
+                            Text="Lancer les réunions planifiées automatiquement."
+                            TextColor="#666" />
                     </VerticalStackLayout>
-                    <Switch IsToggled="{Binding AutoStartEnabled}" Grid.Column="1" />
+                    <Switch Grid.Column="1" IsToggled="{Binding AutoStartEnabled}" />
                 </Grid>
 
-                <!-- AutoStop -->
-                <Grid ColumnDefinitions="*,Auto" Padding="0,8" IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBooleanConverter}}">
+                <!--  AutoStop  -->
+                <Grid
+                    Padding="0,8"
+                    ColumnDefinitions="*,Auto"
+                    IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBooleanConverter}}">
                     <VerticalStackLayout>
-                        <Label Text="Arrêt automatique" FontAttributes="Bold" />
-                        <Label Text="Arrêter l'enregistrement à la fin prévue de la réunion." FontSize="12" TextColor="#666" />
+                        <Label FontAttributes="Bold" Text="Arrêt automatique" />
+                        <Label
+                            FontSize="12"
+                            Text="Arrêter l'enregistrement à la fin prévue de la réunion."
+                            TextColor="#666" />
                     </VerticalStackLayout>
-                    <Switch IsToggled="{Binding AutoStopEnabled}" Grid.Column="1" />
+                    <Switch Grid.Column="1" IsToggled="{Binding AutoStopEnabled}" />
                 </Grid>
 
-                <!-- Section Notifications -->
-                <Label Text="Notifications" FontSize="18" FontAttributes="Bold" TextColor="#333" Margin="0,24,0,0" />
+                <!--  Section Notifications  -->
+                <Label
+                    Margin="0,24,0,0"
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    Text="Notifications"
+                    TextColor="#333" />
 
-                <!-- PreNotifyDelay -->
-                <VerticalStackLayout Spacing="4" IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBooleanConverter}}">
-                    <Label Text="Notifier X minutes avant la réunion" FontAttributes="Bold" />
-                    <Label Text="Définit le délai d’alerte avant le début d’une réunion." FontSize="12" TextColor="#666" />
+                <!--  PreNotifyDelay  -->
+                <VerticalStackLayout IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBooleanConverter}}" Spacing="4">
+                    <Label FontAttributes="Bold" Text="Notifier X minutes avant la réunion" />
+                    <Label
+                        FontSize="12"
+                        Text="Définit le délai d’alerte avant le début d’une réunion."
+                        TextColor="#666" />
                     <Grid ColumnDefinitions="*,Auto" VerticalOptions="Center">
                         <Slider
                             x:Name="PreNotifySlider"
-                            Minimum="0"
                             Maximum="60"
+                            Minimum="0"
                             Value="{Binding PreNotifyDelay, Mode=TwoWay}" />
-                        <Label Grid.Column="1"
-                               Text="{Binding PreNotifyDelay}"
-                               FontSize="14"
-                               FontAttributes="Bold"
-                               Margin="10,0,0,0" />
+                        <Label
+                            Grid.Column="1"
+                            Margin="10,0,0,0"
+                            FontAttributes="Bold"
+                            FontSize="14"
+                            Text="{Binding PreNotifyDelay}" />
                     </Grid>
                 </VerticalStackLayout>
 
-                <!-- RepeatNotifyDelay -->
-                <VerticalStackLayout Spacing="4" IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBooleanConverter}}">
-                    <Label Text="Répéter toutes les X minutes" FontAttributes="Bold" />
-                    <Label Text="Si aucune action n’est faite, répéter l’alerte à ce rythme." FontSize="12" TextColor="#666" />
+                <!--  RepeatNotifyDelay  -->
+                <VerticalStackLayout IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBooleanConverter}}" Spacing="4">
+                    <Label FontAttributes="Bold" Text="Répéter toutes les X minutes" />
+                    <Label
+                        FontSize="12"
+                        Text="Si aucune action n’est faite, répéter l’alerte à ce rythme."
+                        TextColor="#666" />
                     <Grid ColumnDefinitions="*,Auto" VerticalOptions="Center">
                         <Slider
-                            Minimum="1"
                             Maximum="15"
+                            Minimum="1"
                             Value="{Binding RepeatNotifyDelay, Mode=TwoWay}" />
-                        <Label Grid.Column="1"
-                               Text="{Binding RepeatNotifyDelay}"
-                               FontSize="14"
-                               FontAttributes="Bold"
-                               Margin="10,0,0,0" />
+                        <Label
+                            Grid.Column="1"
+                            Margin="10,0,0,0"
+                            FontAttributes="Bold"
+                            FontSize="14"
+                            Text="{Binding RepeatNotifyDelay}" />
                     </Grid>
                 </VerticalStackLayout>
 
-                <!-- Bouton Enregistrer -->
+                <!--  Bouton Enregistrer  -->
                 <Button
-                    Text="Enregistrer les paramètres"
-                    Command="{Binding SaveSettingsCommand}"
+                    Margin="0,24,0,0"
                     BackgroundColor="#1A73E8"
-                    TextColor="White"
+                    Command="{Binding SaveSettingsCommand}"
                     CornerRadius="8"
                     FontAttributes="Bold"
-                    Margin="0,24,0,0"
                     HeightRequest="48"
-                    IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBooleanConverter}}" />
+                    IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBooleanConverter}}"
+                    Text="Enregistrer les paramètres"
+                    TextColor="White" />
 
             </VerticalStackLayout>
         </ScrollView>
 
-        <!-- Overlay d'indicateur de chargement -->
+        <!--  Overlay d'indicateur de chargement  -->
         <BoxView
-            Color="Black"
+            IsVisible="{Binding IsBusy}"
             Opacity="0.4"
-            IsVisible="{Binding IsBusy}" />
+            Color="Black" />
         <ActivityIndicator
+            HorizontalOptions="Center"
             IsRunning="{Binding IsBusy}"
             IsVisible="{Binding IsBusy}"
             VerticalOptions="Center"
-            HorizontalOptions="Center"
             Color="#7F56D9" />
     </Grid>
 </ContentPage>

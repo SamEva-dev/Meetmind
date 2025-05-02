@@ -12,7 +12,7 @@ load_dotenv()
 client = OpenAI()
 
 
-def summarize_transcript(meeting_id: str, transcript_path: str) -> str:
+def summarize_transcript(meetingId: str, transcript_path: str) -> str:
     try:
         with open(transcript_path, "r", encoding="utf-8") as f:
             transcript_text = f.read()
@@ -30,7 +30,7 @@ def summarize_transcript(meeting_id: str, transcript_path: str) -> str:
         )
 
         summary_text = response.choices[0].message.content.strip()
-        summary_path = get_summary_filepath(meeting_id)
+        summary_path = get_summary_filepath(meetingId)
 
         with open(summary_path, "w", encoding="utf-8") as f:
             f.write(summary_text)

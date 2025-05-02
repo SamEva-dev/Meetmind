@@ -11,6 +11,7 @@ from utils.logger_config import logger
 from utils.notification_utils import add_notification
 from services.settings_service import load_settings
 from models.meeting import Meeting
+from utils.datetime_utils import ensure_utc_aware
 import pytz
 import os
 import uuid
@@ -41,36 +42,44 @@ def import_google_events_to_meetings(google_events, meetings):
             continue
 
         title = event.get("summary", "(Sans titre)")
+        start = event["start"].get("dateTime") or event["start"].get("date")
+        end = event["end"].get("dateTime") or event["end"].get("date")
+        start_dt = datetime.fromisoformat(start.replace("Z", "+00:00"))
+        end_dt = datetime.fromisoformat(end.replace("Z", "+00:00"))
+        print(f"start: {start} end: {end}")
+        print(f"start_dt: {start_dt} end_dt: {end_dt}")
 
-        tz_name = event["start"].get("timeZone")
-        if tz_name:
-            event_tz = pytz.timezone(tz_name)
-        else:
-            # fallback sur offset isoformat
-            # datetime.fromisoformat(...).tzinfo contiendra un tzoffset
-            dt0 = datetime.fromisoformat(event["start"]["dateTime"].replace("Z", "+00:00"))
-            event_tz = dt0.tzinfo
 
-        def parse_and_to_utc(field):
-            raw = event[field].get("dateTime")
-            dt_naive = datetime.fromisoformat(raw.replace("Z", "+00:00").split("+")[0])
-            # on localise puis on convertit UTC
-            localized = event_tz.localize(dt_naive) if not dt_naive.tzinfo else dt_naive
-            return localized.astimezone(pytz.utc) 
+        # tz_name = event["start"].get("timeZone")
+        # if tz_name:
+        #     event_tz = pytz.timezone(tz_name)
+        # else:
+        #     # fallback sur offset isoformat
+        #     # datetime.fromisoformat(...).tzinfo contiendra un tzoffset
+        #     dt0 = datetime.fromisoformat(event["start"]["dateTime"].replace("Z", "+00:00"))
+        #     event_tz = dt0.tzinfo
+
+        # def parse_and_to_utc(field):
+        #     raw = event[field].get("dateTime")
+        #     dt_naive = datetime.fromisoformat(raw.replace("Z", "+00:00").split("+")[0])
+        #     # on localise puis on convertit UTC
+        #     localized = event_tz.localize(dt_naive) if not dt_naive.tzinfo else dt_naive
+        #     return localized.astimezone(pytz.utc) 
            
-        start_utc = parse_and_to_utc("start")
-        end_utc   = parse_and_to_utc("end")
+        # start_utc = parse_and_to_utc("start")
+        # end_utc   = parse_and_to_utc("end")
 
         #now = now.astimezone(start_dt.tzinfo)
 
         new_meeting = Meeting(
-            meeting_id=str(uuid.uuid4()),
+            meetingId=str(uuid.uuid4()),
             title=title,
             calendar_event_id=event_id,
-            start_timestamp=start_utc,
-            end_timestamp=end_utc,
+            startTimestamp=start_dt,
+            endTimestamp=end_dt,
             status=MeetingStatus.UPCOMING,
         )
+        print(f"new_meeting: {new_meeting}")
         meetings.append(new_meeting)
         logger.info(f"📅 Réunion importée automatiquement depuis Google : {title}")
 
@@ -87,30 +96,31 @@ def handle_pre_notification(event_id, title, delta_min, pre_notify, repeat_notif
 
 def handle_auto_start(match, title, delta_min):
     logger.info(f"🎯 Démarrage auto : {title} ({int(delta_min)} min)")
-    start_recording(match.meeting_id)
-    update_meeting_status(match.meeting_id, MeetingStatus.IN_PROGRESS)
+    start_recording(match.meetingId)
+    update_meeting_status(match.meetingId, MeetingStatus.IN_PROGRESS)
     logger.info(f"🎬 Reunion demarree automatiquement : {title}")
     add_notification(f"Reunion demarree automatiquement : {title}", type="auto_start")
 
 
 def handle_auto_stop(match,  event_id, repeat_notify):
-    end_utc   = ensure_utc_aware(match.end_timestamp)
+    end_utc   = ensure_utc_aware(match.endTimestamp)
     now_utc = datetime.now(pytz.utc)
-    
+    print(f"1: match.endTimestamp: {match.endTimestamp} now: {now_utc} end_utc: {end_utc}  delta: {end_utc - now_utc}")
     if end_utc - now_utc <= timedelta(minutes=1):
         already = last_notified_minutes.get(event_id)
+        print(f"already: {already} repeat_notify: {repeat_notify}")
         if already is None or abs((end_utc - now_utc).total_seconds() / 60 - already) >= repeat_notify:
             logger.info(f"⏰ Notification avant fin de reunion : {match.title}")
             add_notification(f"Reunion '{match.title}' se termine bientôt", type="pre_stop")
             last_notified_minutes[event_id] = int((end_utc - now_utc).total_seconds() / 60)
             time.sleep(60)
-    print(f"Demarrage fin réunion")
-    print(f"match.end_timestamp: {match.end_timestamp} now: {now_utc} end_utc: {end_utc}  delta: {end_utc - now_utc}")
+    print(f"***************Demarrage fin réunion")
     now_utc = datetime.now(pytz.utc)
+    print(f"2: match.endTimestamp: {match.endTimestamp} now: {now_utc} end_utc: {end_utc}  delta: {end_utc - now_utc}")
     if now_utc >= end_utc:
         logger.info(f"⏹️ Fin de reunion detectee : {match.title}")
-        stop_record(match.meeting_id)
-        #update_meeting_status(match.meeting_id, MeetingStatus.COMPLETED, now_utc)
+        stop_record(match.meetingId)
+        #update_meeting_status(match.meetingId, MeetingStatus.COMPLETED, now_utc)
         add_notification(f"Reunion terminee automatiquement : {match.title}", type="auto_stop")
         logger.info(f"Reunion terminee automatiquement : {match.title}")
 
@@ -137,7 +147,7 @@ async def auto_start_loop():
                 if not match:
                     continue
 
-                start_utc = ensure_utc_aware(match.start_timestamp)
+                start_utc = ensure_utc_aware(match.startTimestamp)
                 
                 now_utc = datetime.now(pytz.utc)
                 delta_min = (start_utc - now_utc).total_seconds() / 60
@@ -155,13 +165,3 @@ async def auto_start_loop():
             logger.error(f"Erreur dans la surveillance automatique: {e}")
 
         await asyncio.sleep(60)  # vérifier chaque minute
-
-def ensure_utc_aware(dt: datetime) -> datetime:
-    """
-    Si dt.n’a pas de tzinfo, on le localise en UTC.
-    Sinon, on le convertit en UTC.
-    """
-    if dt.tzinfo is None:
-        return pytz.utc.localize(dt)
-    else:
-        return dt.astimezone(pytz.utc)

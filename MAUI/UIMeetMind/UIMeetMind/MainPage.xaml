@@ -3,6 +3,7 @@
     x:Class="UIMeetMind.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:sys="clr-namespace:System;assembly=netstandard"
     xmlns:vm="clr-namespace:UIMeetMind.ViewModels"
     x:Name="RootPage"
     BackgroundColor="#FCFCFD">
@@ -77,7 +78,11 @@
                 Text="Effacer toutes les notifications"
                 TextColor="White" />
 
-            <CollectionView Margin="0,10,0,0" ItemsSource="{Binding Notifications}" VerticalScrollBarVisibility="Default">
+            <CollectionView
+                Margin="0,10,0,0"
+                ItemsSource="{Binding Notifications}"
+                MaximumHeightRequest="200"
+                VerticalScrollBarVisibility="Always">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Border
@@ -223,6 +228,7 @@
                             <CollectionView
                                 Grid.Row="1"
                                 ItemsSource="{Binding Meetings}"
+                                MaximumHeightRequest="300"
                                 SelectionMode="None"
                                 VerticalScrollBarVisibility="Default">
                                 <CollectionView.EmptyView>
@@ -255,12 +261,12 @@
                                             <!--  Colonne Start Date  -->
                                             <Label
                                                 Grid.Column="1"
-                                                Text="{Binding StartTimestamp, StringFormat='yyyy-MM-dd'}"
+                                                Text="{Binding StartTimestamp, StringFormat='{dd/MM/yyyy}'}"
                                                 VerticalOptions="Center" />
                                             <!--  Colonne Start Date  -->
                                             <Label
                                                 Grid.Column="2"
-                                                Text="{Binding EndTimestamp, StringFormat='yyyy-MM-dd'}"
+                                                Text="{Binding EndTimestamp, StringFormat='{dd/MM/yyyy}'}"
                                                 VerticalOptions="Center" />
 
                                             <!--  Colonne Statut  -->
@@ -326,17 +332,26 @@
                     StrokeShape="RoundRectangle 12"
                     WidthRequest="300">
                     <VerticalStackLayout>
-                        <Label
-                            Margin="0,0,0,10"
-                            Style="{StaticResource CardTitleStyle}"
-                            Text="Fichiers Audio" />
+
+                        <VerticalStackLayout
+                            x:DataType="sys:DateTime"
+                            BindingContext="{x:Static sys:DateTime.Now}"
+                            VerticalOptions="Center">
+                            <Label Style="{StaticResource CardTitleStyle}" Text="Fichiers Audio" />
+                            <Label
+                                Margin="0,0,0,10"
+                                FontSize="12"
+                                Text="{Binding Path=Date, StringFormat='{0:dd.MM.yyyy}'}"
+                                TextColor="#888888" />
+                        </VerticalStackLayout>
 
                         <CollectionView
                             ItemsSource="{Binding AudioFiles}"
+                            MaximumHeightRequest="200"
                             SelectionChangedCommand="{Binding SelectFileCommand}"
                             SelectionChangedCommandParameter="{Binding SelectedItem, Mode=OneWay}"
                             SelectionMode="Single"
-                            VerticalScrollBarVisibility="Always">
+                            VerticalScrollBarVisibility="Default">
                             <CollectionView.EmptyView>
                                 <VerticalStackLayout
                                     Padding="16"
@@ -378,7 +393,7 @@
                                                     <Label
                                                         FontSize="10"
                                                         HorizontalOptions="Center"
-                                                        Text="{Binding Date, StringFormat='dd/MM/yyyy'}"
+                                                        Text="{Binding EndTimestamp, StringFormat='{0:HH:mm:ss}'}"
                                                         TextColor="#888888" />
                                                 </VerticalStackLayout>
                                             </HorizontalStackLayout>
@@ -429,15 +444,24 @@
                     StrokeShape="RoundRectangle 12"
                     WidthRequest="300">
                     <VerticalStackLayout>
-                        <Label
-                            Margin="0,0,0,10"
-                            Style="{StaticResource CardTitleStyle}"
-                            Text="Transcriptions" />
+                        <VerticalStackLayout
+                            x:DataType="sys:DateTime"
+                            BindingContext="{x:Static sys:DateTime.Now}"
+                            VerticalOptions="Center">
+                            <Label Style="{StaticResource CardTitleStyle}" Text="Transcriptions" />
+                            <Label
+                                Margin="0,0,0,10"
+                                FontSize="12"
+                                Text="{Binding Path=Date, StringFormat='{0:dd.MM.yyyy}'}"
+                                TextColor="#888888" />
+                        </VerticalStackLayout>
                         <CollectionView
                             ItemsSource="{Binding TranscriptFiles}"
+                            MaximumHeightRequest="200"
                             SelectionChangedCommand="{Binding SelectFileCommand}"
                             SelectionChangedCommandParameter="{Binding SelectedItem, Mode=OneWay}"
-                            SelectionMode="Single">
+                            SelectionMode="Single"
+                            VerticalScrollBarVisibility="Always">
 
                             <CollectionView.EmptyView>
                                 <VerticalStackLayout
@@ -476,7 +500,7 @@
                                                     <Label
                                                         FontSize="10"
                                                         HorizontalOptions="Center"
-                                                        Text="{Binding Date, StringFormat='dd/MM/yyyy'}"
+                                                        Text="{Binding EndTimestamp, StringFormat='{0:HH:mm:ss}'}"
                                                         TextColor="#888888" />
                                                 </VerticalStackLayout>
                                             </HorizontalStackLayout>
@@ -508,15 +532,24 @@
                     StrokeShape="RoundRectangle 12"
                     WidthRequest="300">
                     <VerticalStackLayout>
-                        <Label
-                            Margin="0,0,0,10"
-                            Style="{StaticResource CardTitleStyle}"
-                            Text="Résumés" />
+                        <VerticalStackLayout
+                            x:DataType="sys:DateTime"
+                            BindingContext="{x:Static sys:DateTime.Now}"
+                            VerticalOptions="Center">
+                            <Label Style="{StaticResource CardTitleStyle}" Text="Résumés" />
+                            <Label
+                                Margin="0,0,0,10"
+                                FontSize="12"
+                                Text="{Binding Path=Date, StringFormat='{0:dd.MM.yyyy}'}"
+                                TextColor="#888888" />
+                        </VerticalStackLayout>
                         <CollectionView
                             ItemsSource="{Binding SummaryFiles}"
+                            MaximumHeightRequest="200"
                             SelectionChangedCommand="{Binding SelectFileCommand}"
                             SelectionChangedCommandParameter="{Binding SelectedItem, Mode=OneWay}"
-                            SelectionMode="Single">
+                            SelectionMode="Single"
+                            VerticalScrollBarVisibility="Always">
                             <CollectionView.EmptyView>
                                 <VerticalStackLayout
                                     Padding="16"
@@ -555,7 +588,7 @@
                                                     <Label
                                                         FontSize="10"
                                                         HorizontalOptions="Center"
-                                                        Text="{Binding Date, StringFormat='dd/MM/yyyy'}"
+                                                        Text="{Binding EndTimestamp, StringFormat='{0:HH:mm:ss}'}"
                                                         TextColor="#888888" />
                                                 </VerticalStackLayout>
                                             </HorizontalStackLayout>

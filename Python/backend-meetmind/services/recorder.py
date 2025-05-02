@@ -10,6 +10,7 @@ from utils.logger_config import logger
 from models.meeting import MeetingStatus
 from managers.meeting_manager import load_meetings, save_meetings
 from services.calendar import get_today_events
+from utils.datetime_utils import ensure_utc_aware
 
 recording_thread = None
 recording_queue = queue.Queue()
@@ -32,18 +33,18 @@ def _record_worker(filename: str):
         logger.error(f"Erreur pendant l'enregistrement: {e}")
 
 
-def start_recording(meeting_id: str) -> str:
+def start_recording(meetingId: str) -> str:
     global recording_thread, recording_event
     meetings = load_meetings()
-    meeting = next((m for m in meetings if m.meeting_id == meeting_id), None)
+    meeting = next((m for m in meetings if m.meetingId == meetingId), None)
 
     if not meeting:
-        logger.warning(f"Réunion non trouvée: {meeting_id}")
+        logger.warning(f"Réunion non trouvée: {meetingId}")
         return ""
 
-    filename = get_audio_filepath(meeting_id)
+    filename = get_audio_filepath(meetingId)
     meeting.audio_file = os.path.basename(filename)
-    meeting.start_timestamp = datetime.utcnow()
+    #meeting.startTimestamp = datetime.now()
     meeting.status = MeetingStatus.IN_PROGRESS
 
     # Lier à Google Calendar si possible
@@ -57,8 +58,10 @@ def start_recording(meeting_id: str) -> str:
             start_dt = datetime.fromisoformat(start.replace("Z", "+00:00"))
 
             if title.lower() in meeting.title.lower():
-                start_timestamp = datetime.fromisoformat(meeting.start_timestamp.replace("Z", "+00:00"))
-                diff = abs((start_dt - start_timestamp).total_seconds())
+                #startTimestamp = datetime.fromisoformat(meeting.startTimestamp.replace("Z", "+00:00"))
+                start_utc = ensure_utc_aware(start_dt)
+                startTimestamp_utc = ensure_utc_aware(meeting.startTimestamp)
+                diff = abs((start_utc - startTimestamp_utc).total_seconds())
                 print(f"start_recording diff: {diff}")
                 if diff <= 5 * 60:
                     meeting.calendar_event_id = event["id"]

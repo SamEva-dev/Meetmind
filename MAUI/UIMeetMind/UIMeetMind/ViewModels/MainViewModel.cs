@@ -221,7 +221,7 @@ public partial class MainViewModel : ObservableObject
         {
             if (SelectedFile == null) return;
             IsBusy = true;
-            var id = ExtractMeetingId(SelectedFile.FileName);
+            var id = ExtractMeetingId(SelectedFile.MeetingId);
             await _apiService.TranscribeMeetingAsync(id);
             await LoadMeetingsAsync();
             await ShowToastAsync("Transcription lancée !");
@@ -246,7 +246,7 @@ public partial class MainViewModel : ObservableObject
         {
             if (SelectedFile == null) return;
             IsBusy = true;
-            var id = ExtractMeetingId(SelectedFile.FileName);
+            var id = ExtractMeetingId(SelectedFile.MeetingId);
             await _apiService.SummarizeMeetingAsync(id);
             await LoadMeetingsAsync();
             LoggerConfig.Logger.Information("Résumé généré pour {Id}", id);
@@ -268,7 +268,7 @@ public partial class MainViewModel : ObservableObject
         try
         {
             if (SelectedFile == null) return;
-            var id = ExtractMeetingId(SelectedFile.FileName);
+            var id = ExtractMeetingId(SelectedFile.MeetingId);
             var result = await _apiService.GetMeetingResultsAsync(id);
             await Application.Current.MainPage.DisplayAlert("Résultat", result, "OK");
             LoggerConfig.Logger.Information("Affichage des résultats pour {Id}", id);
@@ -329,7 +329,7 @@ public partial class MainViewModel : ObservableObject
         IsBusy = true;
         try
         {
-            var id = ExtractMeetingId(file.FileName);
+            var id = ExtractMeetingId(file.MeetingId);
             await _apiService.TranscribeMeetingAsync(id);
             await LoadMeetingsAsync();
             await ShowToastAsync("Transcription lancée pour " + id);
@@ -350,7 +350,7 @@ public partial class MainViewModel : ObservableObject
         IsBusy = true;
         try
         {
-            var id = ExtractMeetingId(file.FileName);
+            var id = ExtractMeetingId(file.MeetingId);
             await _apiService.SummarizeMeetingAsync(id);
             await LoadMeetingsAsync();
             await ShowToastAsync("Résumé généré pour " + id);

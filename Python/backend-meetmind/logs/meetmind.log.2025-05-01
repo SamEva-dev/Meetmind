@@ -1,0 +1,1331 @@
+2025-05-01 00:30:27,221 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 00:31:16,899 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 00:31:16,899 - ERROR - Erreur de sauvegarde des reunions: Object of type datetime is not JSON serializable
+2025-05-01 00:31:16,899 - INFO - Nouvelle reunion creee: test1 (47b581ac-9cb0-478e-b884-1c346287cbeb)
+2025-05-01 00:31:17,660 - INFO - Recording started: E:\Meetmind\Python\backend-meetmind\storage\files\47b581ac-9cb0-478e-b884-1c346287cbeb.wav
+2025-05-01 00:31:41,700 - INFO - Recording stopped
+2025-05-01 00:31:41,700 - ERROR - Erreur de chargement des reunions: Expecting value: line 6 column 24 (char 140)
+2025-05-01 00:31:41,700 - WARNING - Reunion non trouvee: 47b581ac-9cb0-478e-b884-1c346287cbeb
+2025-05-01 00:35:43,601 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 00:35:53,453 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 00:36:03,522 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 00:36:12,607 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 00:36:21,434 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 00:36:33,090 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 00:36:46,416 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 00:37:01,147 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 00:37:11,369 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 00:37:24,529 - INFO - Préparation à la transcription 47b581ac-9cb0-478e-b884-1c346287cbeb
+2025-05-01 00:37:24,529 - INFO - Audio trouvé E:\Meetmind\Python\backend-meetmind\storage\files\47b581ac-9cb0-478e-b884-1c346287cbeb.wav
+2025-05-01 00:38:52,862 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 00:39:04,097 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 00:39:17,742 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 00:39:29,850 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 00:39:44,439 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 00:39:56,774 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 00:40:34,267 - INFO - Préparation à la transcription 47b581ac-9cb0-478e-b884-1c346287cbeb
+2025-05-01 00:40:34,269 - INFO - Audio trouvé E:\Meetmind\Python\backend-meetmind\storage\files\47b581ac-9cb0-478e-b884-1c346287cbeb.wav
+2025-05-01 00:40:34,270 - INFO - Transcription de l'audio E:\Meetmind\Python\backend-meetmind\storage\files\47b581ac-9cb0-478e-b884-1c346287cbeb.wav pour la reunion 47b581ac-9cb0-478e-b884-1c346287cbeb
+2025-05-01 00:46:50,605 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 00:47:03,305 - INFO - Préparation à la transcription 47b581ac-9cb0-478e-b884-1c346287cbeb
+2025-05-01 00:47:03,305 - INFO - Audio trouvé E:\Meetmind\Python\backend-meetmind\storage\files\47b581ac-9cb0-478e-b884-1c346287cbeb.wav
+2025-05-01 00:47:03,305 - INFO - Transcription de l'audio E:\Meetmind\Python\backend-meetmind\storage\files\47b581ac-9cb0-478e-b884-1c346287cbeb.wav pour la reunion 47b581ac-9cb0-478e-b884-1c346287cbeb
+2025-05-01 00:47:04,522 - INFO - Transcription en cours pour E:\Meetmind\Python\backend-meetmind\storage\files\47b581ac-9cb0-478e-b884-1c346287cbeb.wav
+2025-05-01 00:47:04,522 - ERROR - Erreur pendant la transcription: object of type 'generator' has no len()
+2025-05-01 00:50:15,191 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 00:50:15,207 - INFO - Préparation à la transcription 47b581ac-9cb0-478e-b884-1c346287cbeb
+2025-05-01 00:50:15,207 - INFO - Audio trouvé E:\Meetmind\Python\backend-meetmind\storage\files\47b581ac-9cb0-478e-b884-1c346287cbeb.wav
+2025-05-01 00:50:15,207 - INFO - Transcription de l'audio E:\Meetmind\Python\backend-meetmind\storage\files\47b581ac-9cb0-478e-b884-1c346287cbeb.wav pour la reunion 47b581ac-9cb0-478e-b884-1c346287cbeb
+2025-05-01 00:50:16,468 - INFO - Transcription en cours pour E:\Meetmind\Python\backend-meetmind\storage\files\47b581ac-9cb0-478e-b884-1c346287cbeb.wav
+2025-05-01 00:50:16,468 - ERROR - Erreur pendant la transcription: object of type 'generator' has no len()
+2025-05-01 00:50:48,638 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 00:50:57,764 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 00:50:57,784 - INFO - Préparation à la transcription 47b581ac-9cb0-478e-b884-1c346287cbeb
+2025-05-01 00:50:57,784 - INFO - Audio trouvé E:\Meetmind\Python\backend-meetmind\storage\files\47b581ac-9cb0-478e-b884-1c346287cbeb.wav
+2025-05-01 00:50:57,784 - INFO - Transcription de l'audio E:\Meetmind\Python\backend-meetmind\storage\files\47b581ac-9cb0-478e-b884-1c346287cbeb.wav pour la reunion 47b581ac-9cb0-478e-b884-1c346287cbeb
+2025-05-01 00:50:58,932 - INFO - Transcription en cours pour E:\Meetmind\Python\backend-meetmind\storage\files\47b581ac-9cb0-478e-b884-1c346287cbeb.wav
+2025-05-01 00:51:05,727 - INFO - Texte de la transcription: on va arrêter le record
+donc j'ai lancé le record mon coeur
+et donc ça m'a généry
+un Greek un j'ai e...
+2025-05-01 00:51:05,727 - INFO - Transcription path E:\Meetmind\Python\backend-meetmind\storage\files\47b581ac-9cb0-478e-b884-1c346287cbeb_transcript.txt
+2025-05-01 00:51:05,730 - INFO - Transcription terminee pour E:\Meetmind\Python\backend-meetmind\storage\files\47b581ac-9cb0-478e-b884-1c346287cbeb.wav
+2025-05-01 00:51:05,730 - INFO - Transcription terminée E:\Meetmind\Python\backend-meetmind\storage\files\47b581ac-9cb0-478e-b884-1c346287cbeb_transcript.txt
+2025-05-01 00:51:05,732 - INFO - Ajout du fichier de transcription 47b581ac-9cb0-478e-b884-1c346287cbeb_transcript.txt
+2025-05-01 00:51:05,733 - INFO - Ajout du fichier de transcription E:\Meetmind\Python\backend-meetmind\storage\files\47b581ac-9cb0-478e-b884-1c346287cbeb_transcript.txt
+2025-05-01 00:51:05,755 - ERROR - Erreur de chargement des reunions: 1 validation error for Meeting
+startTimestamp
+  Input should be a valid datetime [type=datetime_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/datetime_type
+2025-05-01 00:51:05,757 - WARNING - Impossible d'ajouter le fichier, reunion non trouvee: 47b581ac-9cb0-478e-b884-1c346287cbeb
+2025-05-01 00:51:05,757 - INFO - Fichier de transcription ajouté 47b581ac-9cb0-478e-b884-1c346287cbeb
+2025-05-01 00:51:05,757 - INFO - Fichier de transcription ajouté E:\Meetmind\Python\backend-meetmind\storage\files\47b581ac-9cb0-478e-b884-1c346287cbeb_transcript.txt
+2025-05-01 00:51:59,070 - ERROR - Erreur pendant la generation du resume: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2025-05-01 00:56:39,198 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 00:56:46,545 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 00:56:55,949 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 00:57:05,482 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 01:10:21,818 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 01:10:24,374 - ERROR - Erreur pendant la generation du resume: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-05-01 01:14:28,224 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 01:14:42,536 - INFO - Resume genere pour E:\Meetmind\Python\backend-meetmind\storage\files\47b581ac-9cb0-478e-b884-1c346287cbeb_transcript.txt
+2025-05-01 01:14:42,553 - ERROR - Erreur de chargement des reunions: 1 validation error for Meeting
+startTimestamp
+  Input should be a valid datetime [type=datetime_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/datetime_type
+2025-05-01 01:14:42,553 - WARNING - Impossible d'ajouter le fichier, reunion non trouvee: 47b581ac-9cb0-478e-b884-1c346287cbeb
+2025-05-01 01:15:43,622 - ERROR - Erreur de chargement des reunions: 1 validation error for Meeting
+startTimestamp
+  Input should be a valid datetime [type=datetime_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/datetime_type
+2025-05-01 01:16:02,835 - ERROR - Erreur de chargement des reunions: 1 validation error for Meeting
+startTimestamp
+  Input should be a valid datetime [type=datetime_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/datetime_type
+2025-05-01 01:17:53,744 - ERROR - Erreur de chargement des reunions: 1 validation error for Meeting
+startTimestamp
+  Input should be a valid datetime [type=datetime_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/datetime_type
+2025-05-01 01:17:53,749 - ERROR - Erreur de sauvegarde des reunions: Object of type datetime is not JSON serializable
+2025-05-01 01:17:53,749 - INFO - Nouvelle reunion creee: test2 (108de1a4-5e98-4719-8ab7-7e45404a20a9)
+2025-05-01 01:17:54,407 - INFO - Recording started: E:\Meetmind\Python\backend-meetmind\storage\files\108de1a4-5e98-4719-8ab7-7e45404a20a9.wav
+2025-05-01 01:18:09,640 - INFO - Recording stopped
+2025-05-01 01:18:09,640 - ERROR - Erreur de chargement des reunions: Expecting value: line 6 column 24 (char 140)
+2025-05-01 01:18:09,640 - WARNING - Reunion non trouvee: 108de1a4-5e98-4719-8ab7-7e45404a20a9
+2025-05-01 01:18:50,531 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 01:18:50,531 - ERROR - Erreur de sauvegarde des reunions: Object of type datetime is not JSON serializable
+2025-05-01 01:18:50,531 - INFO - Nouvelle reunion creee: test3 (0826a621-09dd-41c7-8e9c-8ab2c010927f)
+2025-05-01 01:18:50,909 - INFO - Recording started: E:\Meetmind\Python\backend-meetmind\storage\files\0826a621-09dd-41c7-8e9c-8ab2c010927f.wav
+2025-05-01 01:19:05,384 - INFO - Recording stopped
+2025-05-01 01:19:05,384 - ERROR - Erreur de chargement des reunions: Expecting value: line 6 column 24 (char 140)
+2025-05-01 01:19:05,384 - WARNING - Reunion non trouvee: 0826a621-09dd-41c7-8e9c-8ab2c010927f
+2025-05-01 01:20:46,968 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 01:20:55,353 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 01:21:00,950 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 01:22:22,072 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 01:22:56,638 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 01:22:56,652 - ERROR - Erreur de sauvegarde des reunions: Object of type datetime is not JSON serializable
+2025-05-01 01:22:56,652 - INFO - Nouvelle reunion creee: test5 (2cdbea9d-7b7c-477d-951f-5ad9c2c1cfe6)
+2025-05-01 01:22:57,248 - INFO - Recording started: E:\Meetmind\Python\backend-meetmind\storage\files\2cdbea9d-7b7c-477d-951f-5ad9c2c1cfe6.wav
+2025-05-01 01:23:12,703 - INFO - Recording stopped
+2025-05-01 01:23:12,711 - ERROR - Erreur de chargement des reunions: Expecting value: line 6 column 24 (char 140)
+2025-05-01 01:23:12,711 - WARNING - Reunion non trouvee: 2cdbea9d-7b7c-477d-951f-5ad9c2c1cfe6
+2025-05-01 01:24:44,803 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 01:24:53,251 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 01:25:01,308 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 01:25:10,339 - ERROR - Erreur de chargement des reunions: Expecting value: line 6 column 24 (char 140)
+2025-05-01 01:25:10,339 - INFO - Nouvelle reunion meeting: meetingId='54226f2a-3399-4a14-bb75-0ef4d110122b' title='test6' calendar_event_id=None startTimestamp=datetime.datetime(2025, 5, 1, 1, 25, 10, 339979) endTimestamp=None status=<MeetingStatus.IN_PROGRESS: 'En cours'> files=[] 
+2025-05-01 01:25:10,339 - ERROR - Erreur de sauvegarde des reunions: Object of type datetime is not JSON serializable
+2025-05-01 01:25:10,339 - INFO - Nouvelle reunion creee: test6 (54226f2a-3399-4a14-bb75-0ef4d110122b)
+2025-05-01 01:25:10,796 - INFO - Recording started: E:\Meetmind\Python\backend-meetmind\storage\files\54226f2a-3399-4a14-bb75-0ef4d110122b.wav
+2025-05-01 01:25:50,776 - INFO - Recording stopped
+2025-05-01 01:25:50,778 - ERROR - Erreur de chargement des reunions: Expecting value: line 6 column 24 (char 140)
+2025-05-01 01:25:50,778 - WARNING - Reunion non trouvee: 54226f2a-3399-4a14-bb75-0ef4d110122b
+2025-05-01 01:29:10,916 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 01:31:18,748 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 01:31:25,886 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 01:31:40,512 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 01:31:40,512 - INFO - Nouvelle reunion meeting: meetingId='8208d85e-7495-4ea4-ad6e-7dcf3b7f25ee' title='test7' calendar_event_id=None startTimestamp=datetime.datetime(2025, 5, 1, 1, 31, 40, 512971) endTimestamp=None status=<MeetingStatus.IN_PROGRESS: 'En cours'> files=[] 
+2025-05-01 01:31:40,529 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 01:31:40,529 - INFO - Nouvelle reunion creee: test7 (8208d85e-7495-4ea4-ad6e-7dcf3b7f25ee)
+2025-05-01 01:31:41,211 - INFO - Recording started: E:\Meetmind\Python\backend-meetmind\storage\files\8208d85e-7495-4ea4-ad6e-7dcf3b7f25ee.wav
+2025-05-01 01:31:52,977 - INFO - Recording stopped
+2025-05-01 01:31:52,977 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 01:31:52,977 - INFO - Statut mis a jour pour 8208d85e-7495-4ea4-ad6e-7dcf3b7f25ee: MeetingStatus.COMPLETED
+2025-05-01 01:31:58,028 - INFO - Nouvelle reunion meeting: meetingId='146e1c6c-5ca5-428d-9eb8-b7400bbca0a7' title='test8' calendar_event_id=None startTimestamp=datetime.datetime(2025, 5, 1, 1, 31, 58, 27627) endTimestamp=None status=<MeetingStatus.IN_PROGRESS: 'En cours'> files=[] 
+2025-05-01 01:31:58,029 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 01:31:58,030 - INFO - Nouvelle reunion creee: test8 (146e1c6c-5ca5-428d-9eb8-b7400bbca0a7)
+2025-05-01 01:31:58,414 - INFO - Recording started: E:\Meetmind\Python\backend-meetmind\storage\files\146e1c6c-5ca5-428d-9eb8-b7400bbca0a7.wav
+2025-05-01 01:32:10,351 - INFO - Recording stopped
+2025-05-01 01:32:10,351 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 01:32:10,351 - INFO - Statut mis a jour pour 146e1c6c-5ca5-428d-9eb8-b7400bbca0a7: MeetingStatus.COMPLETED
+2025-05-01 01:32:35,482 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 01:32:35,482 - INFO - Reunion supprimee: 146e1c6c-5ca5-428d-9eb8-b7400bbca0a7
+2025-05-01 01:42:51,955 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 01:47:14,609 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 01:47:30,612 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 01:48:16,460 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 01:58:41,077 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 01:59:22,924 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 01:59:38,539 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 02:00:00,671 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 02:00:00,671 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 02:00:00,676 - ERROR - Erreur lors de la recuperation des reunions Google Calendar: [Errno 2] No such file or directory: 'E:\\Meetmind\\Python\\backend-meetmind\\google_credentials.json'
+2025-05-01 08:32:52,693 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 08:32:52,693 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 08:32:52,697 - ERROR - Erreur lors de la recuperation des reunions Google Calendar: [Errno 2] No such file or directory: 'E:\\Meetmind\\Python\\backend-meetmind\\google_credentials.json'
+2025-05-01 08:33:52,696 - ERROR - Erreur lors de la recuperation des reunions Google Calendar: [Errno 2] No such file or directory: 'E:\\Meetmind\\Python\\backend-meetmind\\google_credentials.json'
+2025-05-01 08:34:52,696 - ERROR - Erreur lors de la recuperation des reunions Google Calendar: [Errno 2] No such file or directory: 'E:\\Meetmind\\Python\\backend-meetmind\\google_credentials.json'
+2025-05-01 08:35:52,699 - ERROR - Erreur lors de la recuperation des reunions Google Calendar: [Errno 2] No such file or directory: 'E:\\Meetmind\\Python\\backend-meetmind\\google_credentials.json'
+2025-05-01 08:36:32,183 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 08:36:32,183 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 08:36:32,191 - ERROR - Erreur lors de la recuperation des reunions Google Calendar: [Errno 2] No such file or directory: 'E:\\Meetmind\\Python\\backend-meetmind\\google_credentials.json'
+2025-05-01 08:37:32,196 - ERROR - Erreur lors de la recuperation des reunions Google Calendar: [Errno 2] No such file or directory: 'E:\\Meetmind\\Python\\backend-meetmind\\google_credentials.json'
+2025-05-01 08:38:45,122 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 08:39:38,689 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 08:39:38,689 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 08:39:40,207 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 08:40:40,885 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 08:41:13,426 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 08:41:13,426 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 08:41:14,934 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 08:42:14,794 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 08:42:14,795 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 08:42:16,268 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 08:43:17,739 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 08:44:12,569 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 08:44:12,571 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 08:44:14,088 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 08:45:15,679 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 08:46:16,422 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 08:46:16,422 - ERROR - Erreur dans la surveillance automatique: can't subtract offset-naive and offset-aware datetimes
+2025-05-01 08:47:03,366 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 08:47:03,368 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 08:47:04,117 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 08:47:04,117 - ERROR - Erreur dans la surveillance automatique: can't subtract offset-naive and offset-aware datetimes
+2025-05-01 08:48:05,285 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 08:48:05,285 - ERROR - Erreur dans la surveillance automatique: can't subtract offset-naive and offset-aware datetimes
+2025-05-01 08:49:05,996 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 08:49:05,996 - ERROR - Erreur dans la surveillance automatique: can't subtract offset-naive and offset-aware datetimes
+2025-05-01 08:50:06,504 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 08:50:06,504 - ERROR - Erreur dans la surveillance automatique: can't subtract offset-naive and offset-aware datetimes
+2025-05-01 08:51:07,036 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 08:51:07,036 - ERROR - Erreur dans la surveillance automatique: can't subtract offset-naive and offset-aware datetimes
+2025-05-01 08:52:07,505 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 08:52:07,505 - ERROR - Erreur dans la surveillance automatique: can't subtract offset-naive and offset-aware datetimes
+2025-05-01 08:52:44,855 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 08:52:44,855 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 08:52:45,525 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 08:52:45,525 - ERROR - Erreur dans la surveillance automatique: can't subtract offset-naive and offset-aware datetimes
+2025-05-01 08:53:06,888 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 08:53:06,888 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 08:53:07,466 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 08:53:07,466 - ERROR - Erreur dans la surveillance automatique: can't subtract offset-naive and offset-aware datetimes
+2025-05-01 08:53:16,295 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 08:53:16,295 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 08:53:16,830 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 08:53:16,830 - ERROR - Erreur dans la surveillance automatique: can't subtract offset-naive and offset-aware datetimes
+2025-05-01 08:53:25,435 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 08:53:25,435 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 08:53:26,094 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 08:53:26,094 - ERROR - Erreur dans la surveillance automatique: can't subtract offset-naive and offset-aware datetimes
+2025-05-01 08:53:46,740 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 08:53:46,740 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 08:53:48,049 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 08:53:48,051 - ERROR - Erreur dans la surveillance automatique: can't subtract offset-naive and offset-aware datetimes
+2025-05-01 08:54:19,724 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 08:54:19,724 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 08:54:19,724 - ERROR - Erreur dans la surveillance automatique: type object 'datetime.datetime' has no attribute 'datetime'
+2025-05-01 08:54:33,635 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 08:54:33,635 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 08:54:33,635 - ERROR - Erreur dans la surveillance automatique: type object 'datetime.datetime' has no attribute 'datetime'
+2025-05-01 08:55:33,629 - ERROR - Erreur dans la surveillance automatique: type object 'datetime.datetime' has no attribute 'datetime'
+2025-05-01 08:55:56,991 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 08:55:56,991 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 08:55:57,563 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 08:56:58,881 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 08:57:59,999 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 08:59:01,379 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 08:59:42,977 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 08:59:42,977 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 08:59:44,311 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 09:00:45,583 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 09:01:46,554 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 09:02:47,265 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 09:03:05,529 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 09:03:05,529 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 09:03:06,871 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 09:04:08,165 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 09:05:09,647 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 09:06:10,880 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 09:07:12,466 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 09:08:13,863 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 09:08:52,969 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 09:08:52,969 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 09:08:54,393 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 09:09:55,693 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 09:10:56,234 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 09:11:56,798 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 09:12:57,323 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 09:13:44,431 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 09:13:44,431 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 09:13:45,107 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 09:13:45,116 - ERROR - Erreur dans la surveillance automatique: can't subtract offset-naive and offset-aware datetimes
+2025-05-01 09:13:54,305 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 09:13:54,305 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 09:13:54,875 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 09:14:06,267 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 09:14:06,267 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 09:14:07,589 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 09:15:08,819 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 09:16:09,443 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 09:17:10,829 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 09:17:30,011 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 09:17:30,025 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 09:17:30,905 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 09:17:50,450 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 09:17:50,450 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 09:17:51,070 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 09:18:52,405 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 09:19:53,687 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 09:20:54,411 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 09:21:55,493 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 09:22:55,969 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 09:23:17,921 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 09:23:17,922 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 09:23:19,353 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 09:23:42,864 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 09:23:42,866 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 09:23:43,319 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 09:23:53,933 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 09:23:53,933 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 09:23:54,471 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 09:24:54,963 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 09:25:55,582 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 09:26:56,132 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 09:27:46,970 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 09:27:46,970 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 09:27:48,350 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 09:28:49,549 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 09:29:50,776 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 09:30:52,060 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 09:31:53,420 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 09:32:54,760 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 09:33:56,229 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 09:34:57,688 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 09:35:59,584 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 09:37:01,100 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 09:38:02,520 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 09:39:03,989 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:08:25,823 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:09:28,028 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:10:28,767 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:11:30,582 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:12:31,167 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:13:31,756 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:14:32,944 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:15:33,704 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:16:34,321 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:17:34,955 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:18:35,596 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:19:36,300 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:20:36,899 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:21:37,689 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:22:38,225 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:23:38,817 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:24:39,585 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:25:40,443 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:26:41,069 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:27:41,806 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:28:42,354 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:29:42,932 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:30:43,703 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:31:44,325 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:32:44,842 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:33:45,390 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:34:45,962 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:35:46,498 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:36:47,095 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:37:47,585 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:38:48,269 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:39:48,873 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:40:49,533 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:41:50,358 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:42:50,879 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:43:51,519 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:44:52,243 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:45:52,876 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:46:53,507 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:47:54,041 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:48:54,701 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:49:55,373 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:50:55,958 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:51:56,610 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:52:57,424 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:53:57,930 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:54:58,427 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:55:59,072 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:56:59,618 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:58:00,211 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 11:59:01,159 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:00:01,839 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:01:02,437 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:02:03,013 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:03:03,598 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:04:04,192 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:05:05,036 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:06:05,602 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:07:06,663 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:08:07,296 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:09:07,917 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:10:08,488 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:11:09,108 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:12:09,773 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:13:10,418 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:14:11,103 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:15:11,658 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:16:12,308 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:17:12,910 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:18:13,518 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:19:14,075 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:20:14,706 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:21:15,358 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:27:10,225 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 12:27:10,226 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 12:27:10,890 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:28:11,481 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:29:12,031 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:30:12,605 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:31:13,216 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:32:13,865 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:33:14,417 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:34:16,890 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:35:18,594 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:36:19,139 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:37:19,769 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:38:20,236 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:39:20,724 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:40:21,252 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:41:21,801 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:42:22,364 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:43:23,027 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:44:23,559 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:45:24,173 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:46:24,804 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:47:25,434 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:48:26,004 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:49:27,253 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:50:27,952 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:51:28,487 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:52:28,996 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:53:29,506 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:54:30,120 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:55:30,701 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:56:31,744 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:57:37,174 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:58:43,181 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 12:59:44,798 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:00:45,467 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:01:46,641 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:02:47,398 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:03:48,135 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:04:48,741 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:05:49,339 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:06:49,993 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:07:50,756 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:08:51,290 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:09:51,893 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:10:52,439 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:11:53,052 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:12:53,694 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:13:54,275 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:14:54,860 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:15:55,984 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:16:56,665 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:17:57,225 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:18:57,944 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:19:58,605 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:20:59,344 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:22:00,219 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:23:00,807 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:24:01,432 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:25:02,032 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:26:02,717 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:27:03,358 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:28:03,988 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:29:04,514 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:30:05,286 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:31:05,859 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:32:06,477 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:33:07,085 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:34:07,612 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:35:08,259 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:36:08,851 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:37:09,525 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:38:10,353 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:39:11,089 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:40:11,673 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:41:12,428 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:42:13,109 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:43:13,785 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:44:14,447 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:45:15,084 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:46:15,697 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:47:16,306 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:48:16,984 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:49:17,553 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:50:18,246 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:51:18,934 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:52:19,998 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:53:20,684 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:54:21,268 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 13:55:21,816 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 13:56:22,518 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 13:57:23,507 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 13:58:24,857 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 13:59:25,994 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 14:00:26,904 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 14:01:27,726 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 14:02:28,501 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 14:03:31,145 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 14:04:32,330 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 14:05:32,990 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 14:06:33,825 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 14:07:34,664 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 14:08:35,600 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 14:09:36,341 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 14:10:37,194 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 14:11:38,207 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 14:12:38,946 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 14:13:39,676 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 14:14:40,517 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 14:15:41,231 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 14:16:41,890 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 14:17:42,568 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 14:18:43,193 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 14:19:43,781 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 14:20:44,392 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 14:21:45,029 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 14:22:45,598 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 14:23:46,203 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 14:24:46,955 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 14:25:47,695 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 14:26:48,248 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 14:52:55,385 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 14:53:56,836 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 14:54:58,188 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 14:55:59,129 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 14:56:59,944 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 14:58:02,477 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 14:59:03,336 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:00:04,235 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:01:05,341 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:02:06,216 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:03:07,507 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:04:08,514 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:05:09,414 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:06:10,309 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:07:11,047 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:08:11,985 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:09:12,875 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:10:13,631 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:11:14,477 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:12:15,317 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:13:16,309 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:14:17,055 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:15:17,892 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:16:18,724 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:17:19,658 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:18:20,704 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:19:21,493 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:20:22,608 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:21:23,427 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:22:24,238 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:23:25,070 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:24:26,026 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:25:26,989 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:26:27,995 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:27:29,036 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:28:30,004 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:29:33,876 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:30:34,648 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:31:35,427 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:32:35,989 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:33:36,530 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:34:37,038 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:35:37,551 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:36:38,147 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:37:38,694 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:38:39,226 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:39:39,709 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:40:40,216 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:41:40,692 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:42:41,263 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:43:41,809 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:44:42,324 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:45:42,813 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:46:43,357 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:47:43,877 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:55:30,346 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:56:31,212 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:57:31,857 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:58:32,540 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 15:59:33,096 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:00:33,689 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:01:34,521 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:02:35,201 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:03:35,749 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:04:36,279 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:05:36,781 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:06:37,350 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:07:37,893 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:08:38,419 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:09:38,910 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:10:39,404 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:11:39,904 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:12:40,454 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:13:40,985 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:14:41,479 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:15:41,974 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:16:42,462 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:17:42,999 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:18:43,588 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:19:44,100 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:41:23,931 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:42:24,817 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:43:25,598 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:44:26,420 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 16:45:27,148 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 16:46:27,793 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 16:47:28,375 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 16:48:28,948 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:49:29,554 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:50:30,344 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:51:30,991 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:52:32,851 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:53:33,778 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:54:34,444 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:55:35,046 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:56:35,709 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:57:36,571 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:58:37,665 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 16:59:38,802 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:00:41,597 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:01:42,288 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:02:43,122 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:03:43,780 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:04:44,496 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:05:45,209 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:06:45,926 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:07:46,539 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:08:47,353 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:09:48,270 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:10:49,189 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:11:50,024 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:12:50,754 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:13:51,406 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:14:52,106 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:15:52,775 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:16:54,388 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:17:55,064 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:18:55,689 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:19:56,286 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:20:56,893 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:21:57,582 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:22:58,614 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:23:59,898 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:25:01,728 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:26:02,758 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:27:03,518 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:28:04,262 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:29:04,841 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:30:05,549 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:31:06,236 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:32:07,272 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:33:08,015 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:34:08,785 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:35:09,532 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:36:10,243 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:37:11,100 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:38:13,158 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:39:16,897 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:40:18,094 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:41:19,011 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:42:19,760 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:43:20,561 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:44:21,194 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:45:21,878 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:46:22,824 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:47:23,501 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:48:24,154 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:49:25,017 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:50:25,620 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:51:26,290 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:52:26,928 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:53:27,537 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:54:28,158 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:55:28,901 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:56:29,536 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:57:30,225 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:58:31,404 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 17:59:32,411 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 18:00:33,655 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 18:01:34,462 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 18:02:35,692 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 18:03:36,903 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 18:04:37,688 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 18:05:38,773 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 18:06:39,548 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 18:07:40,270 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 18:08:36,304 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 18:08:36,305 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 18:08:36,969 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 18:08:47,726 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 18:08:47,726 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 18:08:48,381 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 18:09:48,952 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 18:10:33,843 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 18:10:33,844 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 18:10:34,489 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 18:10:45,803 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 18:10:45,804 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 18:10:46,367 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 18:10:53,898 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 18:10:53,898 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 18:10:54,364 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 18:11:54,994 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 18:12:55,893 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 18:13:56,500 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 18:15:06,339 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 18:15:06,340 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 18:15:06,994 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 18:16:07,617 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 18:16:40,872 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 18:16:40,873 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 18:16:41,420 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 18:17:41,984 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 18:18:42,760 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 18:19:43,401 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 18:20:44,052 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 18:21:44,782 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 18:22:46,703 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 18:23:47,378 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 20:27:10,194 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 20:27:10,194 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 20:27:10,987 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 20:28:11,522 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 20:29:11,969 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 20:30:12,472 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 20:31:12,956 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 20:32:13,504 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 20:33:14,338 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 20:34:14,965 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 20:35:15,687 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 20:35:57,141 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 20:35:57,142 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 20:35:57,660 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 20:36:58,765 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 20:37:59,380 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 20:38:59,956 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 20:39:40,848 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 20:39:40,848 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 20:39:41,434 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 20:40:07,854 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 20:40:07,854 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 20:40:08,508 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 20:41:09,137 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 20:42:09,766 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 20:43:11,188 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 20:44:11,809 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 20:45:12,406 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 20:46:13,006 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 20:47:13,578 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 20:48:14,652 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 20:48:30,388 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 20:48:30,395 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 20:48:31,038 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 20:48:38,798 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 20:48:38,798 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 20:48:39,357 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 20:49:39,913 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 20:50:40,459 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 20:51:10,599 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 20:51:10,602 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 20:51:11,404 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 20:52:11,954 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 20:53:12,572 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 20:54:13,120 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 20:55:13,807 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 20:56:14,377 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 20:57:14,976 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 20:58:15,667 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 20:59:16,626 - INFO - 2 reunions recuperees depuis Google Calendar
+2025-05-01 21:00:17,173 - INFO - 2 reunions recuperees depuis Google Calendar
+2025-05-01 21:03:57,005 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 21:03:57,005 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 21:03:57,613 - INFO - 2 reunions recuperees depuis Google Calendar
+2025-05-01 21:04:58,168 - INFO - 2 reunions recuperees depuis Google Calendar
+2025-05-01 21:05:23,245 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 21:05:23,246 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 21:05:23,910 - INFO - 2 reunions recuperees depuis Google Calendar
+2025-05-01 21:06:24,478 - INFO - 2 reunions recuperees depuis Google Calendar
+2025-05-01 21:07:25,065 - INFO - 2 reunions recuperees depuis Google Calendar
+2025-05-01 21:08:25,750 - INFO - 2 reunions recuperees depuis Google Calendar
+2025-05-01 21:09:26,288 - INFO - 2 reunions recuperees depuis Google Calendar
+2025-05-01 21:10:26,919 - INFO - 2 reunions recuperees depuis Google Calendar
+2025-05-01 21:11:27,561 - INFO - 2 reunions recuperees depuis Google Calendar
+2025-05-01 21:12:13,838 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 21:12:13,839 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 21:12:14,530 - INFO - 2 reunions recuperees depuis Google Calendar
+2025-05-01 21:13:15,226 - INFO - 2 reunions recuperees depuis Google Calendar
+2025-05-01 21:14:16,018 - INFO - 2 reunions recuperees depuis Google Calendar
+2025-05-01 21:15:16,652 - INFO - 2 reunions recuperees depuis Google Calendar
+2025-05-01 21:16:17,488 - INFO - 2 reunions recuperees depuis Google Calendar
+2025-05-01 21:17:18,042 - INFO - 2 reunions recuperees depuis Google Calendar
+2025-05-01 21:18:18,648 - INFO - 2 reunions recuperees depuis Google Calendar
+2025-05-01 21:19:19,225 - INFO - 2 reunions recuperees depuis Google Calendar
+2025-05-01 21:20:19,927 - INFO - 2 reunions recuperees depuis Google Calendar
+2025-05-01 21:21:20,524 - INFO - 2 reunions recuperees depuis Google Calendar
+2025-05-01 21:22:21,141 - INFO - 2 reunions recuperees depuis Google Calendar
+2025-05-01 21:23:21,805 - INFO - 2 reunions recuperees depuis Google Calendar
+2025-05-01 21:24:22,581 - INFO - 2 reunions recuperees depuis Google Calendar
+2025-05-01 21:25:23,191 - INFO - 2 reunions recuperees depuis Google Calendar
+2025-05-01 21:26:23,831 - INFO - 2 reunions recuperees depuis Google Calendar
+2025-05-01 21:27:24,385 - INFO - 2 reunions recuperees depuis Google Calendar
+2025-05-01 22:08:50,542 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 22:09:52,217 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 22:10:52,935 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 22:11:53,530 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 22:12:54,171 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 22:13:54,161 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:13:54,794 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 22:14:54,812 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:14:55,375 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 22:15:55,377 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:15:55,974 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 22:16:55,982 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:16:56,601 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 22:17:56,581 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:17:57,162 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 22:18:57,181 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:18:57,833 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 22:19:57,839 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:19:58,406 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 22:20:58,403 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:20:59,228 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 22:21:59,230 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:21:59,820 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 22:22:59,829 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:23:00,557 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 22:24:00,569 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:24:01,158 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 22:24:50,533 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 22:24:50,546 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 22:24:50,550 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:24:51,179 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 22:26:17,664 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 22:26:17,665 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 22:26:17,666 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:26:18,355 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 22:27:18,359 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:27:18,980 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 22:28:18,996 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:28:19,588 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 22:29:19,592 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:29:20,148 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 22:29:42,070 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 22:29:42,070 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 22:29:42,071 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:29:42,629 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 22:29:50,783 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 22:29:50,783 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 22:29:50,783 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:29:51,318 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 22:30:05,763 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 22:30:05,763 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 22:30:05,763 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:30:06,302 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:31:00,123 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 22:31:00,123 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 22:31:00,123 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:31:00,741 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:31:21,719 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 22:31:21,719 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 22:31:21,719 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:31:22,270 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:31:38,944 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 22:31:38,953 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 22:31:38,957 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:31:39,696 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:31:53,065 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 22:31:53,065 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 22:31:53,065 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:31:53,578 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:32:53,598 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:32:54,134 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:33:54,132 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:33:54,702 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:34:54,699 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:34:55,230 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:35:55,233 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:35:55,922 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:36:55,919 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:36:56,610 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:37:56,608 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:37:57,184 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:38:57,187 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:38:58,266 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:39:58,279 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:39:58,951 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:40:58,997 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:40:59,679 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:41:59,668 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:42:00,288 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:43:00,285 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:43:00,842 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:44:00,852 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:44:01,454 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:45:01,454 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:45:02,004 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:46:02,003 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:46:02,721 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:47:02,722 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:47:03,267 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:48:03,276 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:48:03,913 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:49:03,926 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:49:04,550 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:50:04,528 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:50:05,123 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:51:05,131 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:51:05,665 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:51:41,110 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 22:51:41,110 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 22:51:41,110 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:51:41,717 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:52:10,265 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 22:52:10,266 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 22:52:10,269 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:52:10,815 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:52:23,884 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 22:52:23,884 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 22:52:23,884 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:52:24,426 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:52:52,715 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 22:52:52,724 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 22:52:52,727 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:52:53,319 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:53:06,819 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 22:53:06,819 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 22:53:06,819 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:53:07,369 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:53:28,747 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 22:53:28,747 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 22:53:28,747 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:53:29,315 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:54:18,971 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 22:54:18,971 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 22:54:18,971 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:54:19,537 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:54:19,537 - ERROR - Erreur dans la surveillance automatique: name 'save_meetings' is not defined
+2025-05-01 22:54:34,429 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 22:54:34,429 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 22:54:34,429 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:54:34,915 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:54:34,915 - ERROR - Erreur dans la surveillance automatique: save_meetings() missing 1 required positional argument: 'meetings'
+2025-05-01 22:55:24,789 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 22:55:24,791 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 22:55:24,791 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:55:25,282 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:55:25,298 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 22:56:25,304 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 22:56:25,821 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:56:25,821 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 22:57:26,276 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:57:26,276 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 22:58:26,827 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:58:26,829 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 22:59:24,824 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 22:59:24,824 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 22:59:25,327 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:59:25,327 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 22:59:38,732 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 22:59:38,732 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 22:59:38,732 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 22:59:39,220 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:59:39,221 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 22:59:46,607 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 22:59:46,607 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 22:59:46,607 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 22:59:47,126 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 22:59:47,126 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:00:47,121 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:00:47,619 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:00:47,620 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:01:47,625 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:01:48,179 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:01:48,179 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:02:48,190 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:02:48,825 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:02:48,829 - INFO - 📅 Réunion importée automatiquement depuis Google : (Sans titre)
+2025-05-01 23:02:48,841 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:02:48,842 - INFO - 🔔 Notification avant reunion : (Sans titre) (2 min)
+2025-05-01 23:02:48,843 - INFO - 🎯 Démarrage auto : (Sans titre) (2 min)
+2025-05-01 23:02:48,857 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:02:48,859 - ERROR - Erreur dans la surveillance automatique: "Meeting" object has no field "audio_file"
+2025-05-01 23:03:48,881 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:03:49,513 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:03:49,513 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:03:49,513 - INFO - 🎯 Démarrage auto : (Sans titre) (1 min)
+2025-05-01 23:03:49,513 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:03:49,513 - ERROR - Erreur dans la surveillance automatique: "Meeting" object has no field "audio_file"
+2025-05-01 23:04:49,510 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:04:50,059 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:04:50,059 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:04:50,059 - INFO - 🔔 Notification avant reunion : (Sans titre) (0 min)
+2025-05-01 23:04:50,085 - INFO - 🎯 Démarrage auto : (Sans titre) (0 min)
+2025-05-01 23:04:50,085 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:04:50,089 - ERROR - Erreur dans la surveillance automatique: "Meeting" object has no field "audio_file"
+2025-05-01 23:05:50,106 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:05:50,696 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:05:50,696 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:06:44,793 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 23:06:44,794 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 23:06:44,794 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:06:45,474 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:06:45,477 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:07:45,472 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:07:46,014 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:07:46,014 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:08:52,718 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 23:08:52,720 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 23:08:52,720 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:08:53,392 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:08:53,408 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:09:53,404 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:09:54,510 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:09:54,510 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:10:54,524 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:10:55,334 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:10:55,334 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:11:55,330 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:11:55,978 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:11:55,993 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:12:36,466 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:12:56,002 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:12:56,585 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:12:56,585 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:13:56,611 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:13:58,711 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:13:58,712 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:14:58,708 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:14:59,339 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:14:59,341 - INFO - 📅 Réunion importée automatiquement depuis Google : Reunion bussiness
+2025-05-01 23:14:59,341 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:14:59,350 - INFO - 🔔 Notification avant reunion : Reunion bussiness (0 min)
+2025-05-01 23:14:59,354 - INFO - 🎯 Démarrage auto : Reunion bussiness (0 min)
+2025-05-01 23:14:59,375 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:14:59,375 - ERROR - Erreur dans la surveillance automatique: "Meeting" object has no field "audio_file"
+2025-05-01 23:15:59,386 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:16:00,105 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:16:00,122 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:17:00,124 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:17:00,790 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:17:00,790 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:18:00,790 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:18:01,608 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:18:01,608 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:19:01,613 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:19:02,343 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:19:02,348 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:19:05,382 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:20:02,348 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:20:02,878 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:20:02,880 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:21:02,881 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:21:03,448 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:21:03,448 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:22:03,450 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:22:04,002 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:22:04,005 - INFO - 📅 Réunion importée automatiquement depuis Google : (Sans titre)
+2025-05-01 23:22:04,005 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:22:04,005 - INFO - 🔔 Notification avant reunion : (Sans titre) (7 min)
+2025-05-01 23:23:04,021 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:23:04,655 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:23:04,657 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:23:29,651 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 23:23:29,651 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 23:23:29,651 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:23:30,400 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:23:30,402 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:23:30,402 - INFO - 🔔 Notification avant reunion : (Sans titre) (6 min)
+2025-05-01 23:23:45,376 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 23:23:45,376 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 23:23:45,376 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:23:45,963 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:23:45,966 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:23:45,966 - INFO - 🔔 Notification avant reunion : (Sans titre) (6 min)
+2025-05-01 23:24:00,556 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 23:24:00,556 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 23:24:00,556 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:24:01,105 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:24:01,105 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:24:01,105 - INFO - 🔔 Notification avant reunion : (Sans titre) (5 min)
+2025-05-01 23:24:11,377 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 23:24:11,378 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 23:24:11,379 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:24:11,999 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:24:12,000 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:24:12,000 - INFO - 🔔 Notification avant reunion : (Sans titre) (5 min)
+2025-05-01 23:24:27,396 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 23:24:27,396 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 23:24:27,398 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:24:28,000 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:24:28,003 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:24:28,004 - INFO - 🔔 Notification avant reunion : (Sans titre) (5 min)
+2025-05-01 23:25:52,614 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 23:25:52,614 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 23:25:52,614 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:25:53,165 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:25:53,165 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:25:53,165 - INFO - 🔔 Notification avant reunion : (Sans titre) (4 min)
+2025-05-01 23:25:53,165 - INFO - 🎯 Démarrage auto : (Sans titre) (4 min)
+2025-05-01 23:25:53,165 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:25:53,176 - ERROR - Erreur dans la surveillance automatique: "Meeting" object has no field "audio_file"
+2025-05-01 23:26:04,526 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 23:26:04,526 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 23:26:04,526 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:26:05,059 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:26:05,059 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:26:05,059 - INFO - 🔔 Notification avant reunion : (Sans titre) (3 min)
+2025-05-01 23:26:05,088 - INFO - 🎯 Démarrage auto : (Sans titre) (3 min)
+2025-05-01 23:26:05,095 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:26:05,098 - ERROR - Erreur dans la surveillance automatique: "Meeting" object has no field "audio_file"
+2025-05-01 23:26:13,821 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 23:26:13,821 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 23:26:13,821 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:26:14,407 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:26:14,407 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:26:14,407 - INFO - 🔔 Notification avant reunion : (Sans titre) (3 min)
+2025-05-01 23:26:14,430 - INFO - 🎯 Démarrage auto : (Sans titre) (3 min)
+2025-05-01 23:26:14,430 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:26:14,430 - ERROR - Erreur dans la surveillance automatique: "Meeting" object has no field "audio_file"
+2025-05-01 23:27:14,443 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:27:14,989 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:27:14,989 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:27:14,989 - INFO - 🎯 Démarrage auto : (Sans titre) (2 min)
+2025-05-01 23:27:14,989 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:27:14,989 - ERROR - Erreur dans la surveillance automatique: "Meeting" object has no field "audio_file"
+2025-05-01 23:28:01,153 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 23:28:01,153 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 23:28:01,167 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:28:01,975 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:28:01,977 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:28:01,977 - INFO - 🔔 Notification avant reunion : (Sans titre) (1 min)
+2025-05-01 23:28:01,988 - INFO - 🎯 Démarrage auto : (Sans titre) (1 min)
+2025-05-01 23:28:02,000 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:28:02,003 - ERROR - Erreur dans la surveillance automatique: "Meeting" object has no field "audio_file"
+2025-05-01 23:28:12,878 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 23:28:12,879 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 23:28:12,879 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:28:13,559 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:28:13,564 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:28:13,575 - INFO - 🔔 Notification avant reunion : (Sans titre) (1 min)
+2025-05-01 23:28:13,608 - INFO - 🎯 Démarrage auto : (Sans titre) (1 min)
+2025-05-01 23:28:13,617 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:28:13,621 - ERROR - Erreur dans la surveillance automatique: "Meeting" object has no field "audio_file"
+2025-05-01 23:29:13,627 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:29:14,219 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:29:14,220 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:29:14,221 - INFO - 🎯 Démarrage auto : (Sans titre) (0 min)
+2025-05-01 23:29:14,223 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:29:14,223 - ERROR - Erreur dans la surveillance automatique: "Meeting" object has no field "audio_file"
+2025-05-01 23:30:14,233 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:30:14,748 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:30:14,748 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:31:14,752 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:31:15,350 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:31:15,350 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:31:26,282 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:32:15,354 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:32:15,852 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:32:15,868 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:33:15,858 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:33:16,806 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:33:16,806 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:34:16,818 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:34:17,356 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:34:17,356 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:37:19,833 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 23:37:19,833 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 23:37:19,833 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:37:20,413 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:37:20,413 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:38:20,417 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:38:21,025 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:38:21,026 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:39:21,044 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:39:21,867 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:39:21,870 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:39:27,571 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:40:21,888 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:40:22,708 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:40:22,710 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:40:52,176 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 23:40:52,177 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 23:40:52,180 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:40:52,808 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:40:52,811 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:41:20,846 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 23:41:20,847 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 23:41:20,848 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:41:20,850 - ERROR - Erreur de chargement des reunions: 1 validation error for Meeting
+status
+  Input should be 'UPCOMING', 'IN_PROGRESS' or 'COMPLETED' [type=enum, input_value='A venir', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/enum
+2025-05-01 23:41:21,386 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:41:21,389 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:41:48,658 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 23:41:48,659 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 23:41:48,660 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:41:49,385 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:41:49,386 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:42:49,384 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:42:49,979 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:42:49,980 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:43:49,986 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:43:50,681 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:43:50,685 - INFO - 📅 Réunion importée automatiquement depuis Google : Reunion V2
+2025-05-01 23:43:50,691 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:43:50,692 - INFO - 🔔 Notification avant reunion : Reunion V2 (1 min)
+2025-05-01 23:43:50,694 - INFO - 🎯 Démarrage auto : Reunion V2 (1 min)
+2025-05-01 23:43:50,728 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:43:51,420 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:43:51,420 - WARNING - Erreur de liaison avec Google Calendar : can't subtract offset-naive and offset-aware datetimes
+2025-05-01 23:43:51,422 - ERROR - Erreur dans la surveillance automatique: save_meetings() missing 1 required positional argument: 'meetings'
+2025-05-01 23:44:34,549 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 23:44:34,557 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 23:44:34,560 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:44:35,271 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:44:35,271 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:44:35,271 - INFO - 🔔 Notification avant reunion : Reunion V2 (0 min)
+2025-05-01 23:44:35,271 - INFO - 🎯 Démarrage auto : Reunion V2 (0 min)
+2025-05-01 23:44:35,283 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:44:35,946 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:44:35,946 - WARNING - Erreur de liaison avec Google Calendar : can't subtract offset-naive and offset-aware datetimes
+2025-05-01 23:44:35,947 - ERROR - Erreur dans la surveillance automatique: save_meetings() missing 1 required positional argument: 'meetings'
+2025-05-01 23:45:35,960 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:45:36,612 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:45:36,612 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:46:36,627 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:46:37,267 - INFO - 1 reunions recuperees depuis Google Calendar
+2025-05-01 23:46:37,268 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:47:37,268 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:47:37,931 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:47:37,931 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:48:37,947 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:48:38,866 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:48:38,866 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:49:38,864 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:49:39,468 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:49:39,468 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:50:18,577 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 23:50:18,578 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 23:50:18,581 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:50:19,231 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:50:19,231 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:50:32,871 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 23:50:32,872 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 23:50:32,872 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:50:33,439 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:50:33,442 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:51:31,513 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 23:51:31,514 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 23:51:31,515 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:51:32,006 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:51:32,006 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:51:57,445 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 23:51:57,446 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 23:51:57,447 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:51:58,021 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:51:58,021 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:52:07,193 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 23:52:07,193 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 23:52:07,195 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:52:07,815 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:52:07,815 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:52:25,157 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 23:52:25,157 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 23:52:25,157 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:52:25,747 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:52:25,747 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:52:44,214 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 23:52:44,215 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 23:52:44,216 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:52:44,764 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:52:44,775 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:52:55,345 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 23:52:55,345 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 23:52:55,346 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:52:55,920 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:52:55,921 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:53:05,721 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 23:53:05,721 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 23:53:05,721 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:53:06,329 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:53:06,331 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:53:23,016 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:53:23,016 - INFO - Nouvelle reunion meeting: meetingId='90710baf-fcb2-43a2-bead-dfe0acc352bf' title='reu' calendar_event_id=None startTimestamp=datetime.datetime(2025, 5, 1, 23, 53, 23, 16870) endTimestamp=None status=<MeetingStatus.IN_PROGRESS: 'IN_PROGRESS'> files=[] audio_file=None transcript_file=None summary_file=None 
+2025-05-01 23:53:23,016 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:53:23,016 - INFO - Nouvelle reunion creee: reu (90710baf-fcb2-43a2-bead-dfe0acc352bf)
+2025-05-01 23:53:23,074 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:53:23,885 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:54:06,330 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:54:07,860 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:54:07,866 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:55:07,857 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:55:08,404 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:55:08,404 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:55:39,356 - INFO - 🚀 MeetMind API demarree avec succes
+2025-05-01 23:55:39,358 - INFO - ⏳ Surveillance automatique des reunions activee
+2025-05-01 23:55:39,358 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:55:39,895 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:55:39,895 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:55:48,131 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:55:48,131 - INFO - Nouvelle reunion meeting: meetingId='1e69e2e9-3769-41a8-b0a8-066a6cf602d2' title='reu' calendar_event_id=None startTimestamp=datetime.datetime(2025, 5, 1, 23, 55, 48, 131384) endTimestamp=None status=<MeetingStatus.IN_PROGRESS: 'IN_PROGRESS'> files=[] audio_file=None transcript_file=None summary_file=None 
+2025-05-01 23:55:48,131 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:55:48,131 - INFO - Nouvelle reunion creee: reu (1e69e2e9-3769-41a8-b0a8-066a6cf602d2)
+2025-05-01 23:55:48,152 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:55:48,729 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:55:48,729 - ERROR - Erreur de sauvegarde des reunions: 'tuple' object has no attribute 'model_dump_json'
+2025-05-01 23:55:49,417 - INFO - Recording started: E:\Meetmind\Python\backend-meetmind\storage\files\1e69e2e9-3769-41a8-b0a8-066a6cf602d2.wav
+2025-05-01 23:56:32,939 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 23:56:37,397 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 23:56:39,905 - ERROR - Erreur de chargement des reunions: Expecting value: line 1 column 1 (char 0)
+2025-05-01 23:56:40,416 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:56:40,416 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:56:42,270 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:57:21,660 - INFO - Recording stopped
+2025-05-01 23:57:21,664 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:57:21,665 - WARNING - Reunion non trouvee: 1e69e2e9-3769-41a8-b0a8-066a6cf602d2
+2025-05-01 23:57:21,666 - INFO - Transcription de l'audio E:\Meetmind\Python\backend-meetmind\storage\files\1e69e2e9-3769-41a8-b0a8-066a6cf602d2.wav pour la reunion 1e69e2e9-3769-41a8-b0a8-066a6cf602d2
+2025-05-01 23:57:24,653 - INFO - Transcription en cours pour E:\Meetmind\Python\backend-meetmind\storage\files\1e69e2e9-3769-41a8-b0a8-066a6cf602d2.wav
+2025-05-01 23:57:40,427 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:57:41,513 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:57:41,515 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:58:41,524 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:58:42,573 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:58:42,585 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:58:44,930 - INFO - Texte de la transcription: 3D %,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,...
+2025-05-01 23:58:44,930 - INFO - Transcription path E:\Meetmind\Python\backend-meetmind\storage\files\1e69e2e9-3769-41a8-b0a8-066a6cf602d2_transcript.txt
+2025-05-01 23:58:44,930 - INFO - Transcription terminee pour E:\Meetmind\Python\backend-meetmind\storage\files\1e69e2e9-3769-41a8-b0a8-066a6cf602d2.wav
+2025-05-01 23:58:44,936 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:58:44,938 - WARNING - Impossible d'ajouter le fichier, reunion non trouvee: 1e69e2e9-3769-41a8-b0a8-066a6cf602d2
+2025-05-01 23:58:48,664 - INFO - Resume genere pour E:\Meetmind\Python\backend-meetmind\storage\files\1e69e2e9-3769-41a8-b0a8-066a6cf602d2_transcript.txt
+2025-05-01 23:58:48,665 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:58:48,665 - WARNING - Impossible d'ajouter le fichier, reunion non trouvee: 1e69e2e9-3769-41a8-b0a8-066a6cf602d2
+2025-05-01 23:59:42,606 - INFO - Reunions chargees depuis E:\Meetmind\Python\backend-meetmind\storage\meetings.json
+2025-05-01 23:59:43,173 - INFO - 0 reunions recuperees depuis Google Calendar
+2025-05-01 23:59:43,176 - INFO - Reunions sauvegardees dans E:\Meetmind\Python\backend-meetmind\storage\meetings.json

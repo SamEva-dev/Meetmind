@@ -38,56 +38,59 @@ def save_meetings(meetings: List[Meeting]):
 def create_meeting(title: str, calendar_event_id: Optional[str] = None) -> Meeting:
     meetings = load_meetings()
     meeting = Meeting(
-        meeting_id=str(uuid.uuid4()),
+        meetingId=str(uuid.uuid4()),
         title=title,
         calendar_event_id=calendar_event_id,
-        start_timestamp=datetime.now(),
+        startTimestamp=datetime.now(),
         status=MeetingStatus.IN_PROGRESS,
         files=[]
     )
     logger.info(f"Nouvelle reunion meeting: {meeting} ")
     meetings.append(meeting)
     save_meetings(meetings)
-    logger.info(f"Nouvelle reunion creee: {meeting.title} ({meeting.meeting_id})")
+    logger.info(f"Nouvelle reunion creee: {meeting.title} ({meeting.meetingId})")
     return meeting
 
 
-def update_meeting_status(meeting_id: str, status: MeetingStatus, end_timestamp: Optional[datetime] = None):
+def update_meeting_status(meetingId: str, status: MeetingStatus, endTimestamp: Optional[datetime] = None):
     meetings = load_meetings()
     for m in meetings:
-        if m.meeting_id == meeting_id:
+        if m.meetingId == meetingId:
             m.status = status
-            if end_timestamp:
-                m.end_timestamp = end_timestamp
+            if endTimestamp:
+                m.lastTimestamp = endTimestamp
+            if m.endTimestamp is None:
+                m.lastTimestamp = endTimestamp
+                
             save_meetings(meetings)
-            logger.info(f"Statut mis a jour pour {meeting_id}: {status}")
+            logger.info(f"Statut mis a jour pour {meetingId}: {status}")
             return
-    logger.warning(f"Reunion non trouvee: {meeting_id}")
+    logger.warning(f"Reunion non trouvee: {meetingId}")
 
 
-def add_meeting_file(meeting_id: str, file: MeetingFile):
+def add_meeting_file(meetingId: str, file: MeetingFile):
     meetings = load_meetings()
     for m in meetings:
-        if m.meeting_id == meeting_id:
+        if m.meetingId == meetingId:
             m.files.append(file)
             save_meetings(meetings)
-            logger.info(f"Fichier ajoute a la reunion {meeting_id}: {file.file_name}")
+            logger.info(f"Fichier ajoute a la reunion {meetingId}: {file.file_name}")
             return
-    logger.warning(f"Impossible d'ajouter le fichier, reunion non trouvee: {meeting_id}")
+    logger.warning(f"Impossible d'ajouter le fichier, reunion non trouvee: {meetingId}")
 
 
-def get_meeting(meeting_id: str) -> Optional[Meeting]:
+def get_meeting(meetingId: str) -> Optional[Meeting]:
     for m in load_meetings():
-        if m.meeting_id == meeting_id:
+        if m.meetingId == meetingId:
             return m
     return None
 
 
-def delete_meeting(meeting_id: str):
+def delete_meeting(meetingId: str):
     meetings = load_meetings()
-    new_list = [m for m in meetings if m.meeting_id != meeting_id]
+    new_list = [m for m in meetings if m.meetingId != meetingId]
     save_meetings(new_list)
-    logger.info(f"Reunion supprimee: {meeting_id}")
+    logger.info(f"Reunion supprimee: {meetingId}")
 
 
 def list_meetings() -> List[Meeting]:

@@ -4,6 +4,7 @@ from fastapi import APIRouter, HTTPException
 from managers.meeting_manager import load_meetings
 from models.meeting import MeetingFile
 from datetime import datetime, date
+import pytz
 
 router = APIRouter()
 
@@ -32,17 +33,13 @@ def get_summary_files():
 def _get_files_by_type(file_type: str):
     meetings = load_meetings()
     result = []
-    today = date.today()
+    today = datetime.now(pytz.utc).date()
     for meeting in meetings:
         if file_type == "audio":
-            if meeting.audio_file and meeting.end_timestamp.date() == today:
+            if meeting.audio_file and meeting.endTimestamp.date() == today:
                 result.append(meeting)
         else:
             for f in meeting.files:
-                # Filtrer par type et date
-                print(f"File: {f.file_name}, Type: {f.type}, Date: {f.date.date()}")
-                
                 if f.type == file_type and f.date.date() == today:
                     result.append(f)
-
     return result

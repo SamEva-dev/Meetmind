@@ -14,6 +14,7 @@ from utils.file_utils import get_audio_filepath, get_transcript_filepath, get_su
 from services.calendar import get_today_events
 from utils.logger_config import logger
 from datetime import datetime
+from utils.datetime_utils import ensure_utc_aware
 import pytz
 import os
 
@@ -22,13 +23,13 @@ router = APIRouter()
 @router.post("/start_record")
 def start_record(title: str):
     meeting = create_meeting(title)
-    filepath = start_recording(meeting.meeting_id)
-    return {"meeting_id": meeting.meeting_id, "file": filepath}
+    filepath = start_recording(meeting.meetingId)
+    return {"meetingId": meeting.meetingId, "file": filepath}
 
 @router.post("/stop_record")
-def stop_record(meeting_id: str):
+def stop_record(meetingId: str):
     stop_recording()
-    update_meeting_status(meeting_id, MeetingStatus.COMPLETED, datetime.now(pytz.utc))
+    update_meeting_status(meetingId, MeetingStatus.COMPLETED, datetime.now(pytz.utc))
 
     settings = load_settings()
     auto_transcribe = settings.get("autoTranscribe", True)
@@ -36,26 +37,26 @@ def stop_record(meeting_id: str):
     result = {"message": "Recording stopped."}
 
     if auto_transcribe:
-        audio_path = get_audio_filepath(meeting_id)
-        transcript_path = transcribe_audio(meeting_id, audio_path)
+        audio_path = get_audio_filepath(meetingId)
+        transcript_path = transcribe_audio(meetingId, audio_path)
         file = MeetingFile(
             file_name=os.path.basename(transcript_path),
             file_path=str(transcript_path),
             type="transcript",
-            date=datetime.now(pytz.utc)
+            date=datetime.now
         )
-        add_meeting_file(meeting_id, file)
+        add_meeting_file(meetingId, file)
         result["transcript_path"] = transcript_path
 
         if auto_summarize:
-            summary_path = summarize_transcript(meeting_id, transcript_path)
+            summary_path = summarize_transcript(meetingId, transcript_path)
             file = MeetingFile(
                 file_name=os.path.basename(summary_path),
                 file_path=str(summary_path),
                 type="summary",
-                date=datetime.now(pytz.utc)
+                date=datetime.now
             )
-            add_meeting_file(meeting_id, file)
+            add_meeting_file(meetingId, file)
             result["summary_path"] = summary_path
 
     return result
@@ -68,54 +69,61 @@ def stop_all_meetings():
     for m in meetings:
         if m.status == MeetingStatus.IN_PROGRESS:
             stop_recording()
-            update_meeting_status(m.meeting_id, MeetingStatus.COMPLETED, datetime.now(pytz.utc))
-            stopped.append(m.meeting_id)
+            update_meeting_status(m.meetingId, MeetingStatus.COMPLETED, datetime.now(pytz.utc))
+            stopped.append(m.meetingId)
     return {"message": "Reunions en cours arrete", "meetings": stopped}
 
 @router.post("/transcribe")
-def transcribe(meeting_id: str):
-    audio_path = get_audio_filepath(meeting_id)
-    transcript_path = transcribe_audio(meeting_id, audio_path)
+def transcribe(meetingId: str):
+    print(f"Transcribing meeting {meetingId}...")
+    audio_path = get_audio_filepath(meetingId)
+    transcript_path = transcribe_audio(meetingId, audio_path)
     file = MeetingFile(
         file_name=os.path.basename(transcript_path),
         file_path=str(transcript_path),
         type="transcript",
-        date=datetime.now(pytz.utc)
+        date=datetime.now
     )
-    add_meeting_file(meeting_id, file)
+    add_meeting_file(meetingId, file)
     return {"transcript_path": transcript_path}
 
 @router.post("/summarize")
-def summarize(meeting_id: str):
-    transcript_path = get_transcript_filepath(meeting_id)
-    summary_path = summarize_transcript(meeting_id, transcript_path)
+def summarize(meetingId: str):
+    transcript_path = get_transcript_filepath(meetingId)
+    summary_path = summarize_transcript(meetingId, transcript_path)
     file = MeetingFile(
         file_name=os.path.basename(summary_path),
         file_path=str(summary_path),
         type="summary",
-        date=datetime.now(pytz.utc)
+        date=datetime.now
     )
-    add_meeting_file(meeting_id, file)
+    add_meeting_file(meetingId, file)
     return {"summary_path": summary_path}
 
 @router.get("/meetings")
 def get_all_meetings():
     return list_meetings()
 
-@router.get("/meetings/{meeting_id}")
-def get_one_meeting(meeting_id: str):
-    return get_meeting(meeting_id)
+@router.get("/meetings/{meetingId}")
+def get_one_meeting(meetingId: str):
+    return get_meeting(meetingId)
 
 @router.get("/meeting/today")
 def get_today_meetings():
     meetings = load_meetings()
     today = datetime.now(pytz.utc).date()
+    print(f"today: {today}")
+    
     # Filtrer les réunions dont le début est aujourd'hui
-    return [m for m in meetings if m.start_timestamp and m.start_timestamp.date() == today]
+    result = []
+    for m in meetings:
+        if m.startTimestamp and ensure_utc_aware(m.startTimestamp).date() == today:
+            result.append(m)
+    return result
 
-@router.delete("/meetings/{meeting_id}")
-def delete_one_meeting(meeting_id: str):
-    delete_meeting(meeting_id)
+@router.delete("/meetings/{meetingId}")
+def delete_one_meeting(meetingId: str):
+    delete_meeting(meetingId)
     return {"message": "Meeting deleted."}
 
 @router.post("/meetings/{calendar_event_id}/force_start")
@@ -126,9 +134,9 @@ def force_start_meeting(calendar_event_id: str):
         raise HTTPException(status_code=404, detail="Aucune reunion associee a cet event Google")
 
     existing.status = MeetingStatus.IN_PROGRESS
-    filepath = start_recording(existing.meeting_id)
+    filepath = start_recording(existing.meetingId)
     return {
         "message": "Reunion demarree manuellement",
-        "meeting_id": existing.meeting_id,
+        "meetingId": existing.meetingId,
         "file": filepath
     }
